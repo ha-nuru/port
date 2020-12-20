@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>짝맞추기 게임</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ynv7kns.css">
+    <style>
+        * {
+            font-family: lores-9-narrow, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-transform: capitalize;
+        }
+
+        body {
+            padding-top: 10%;
+            margin: 0 auto;
+        }
+
+        input {
+            background-color: transparent;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-bottom: 5px;
+            border: 2px solid #555;
+            padding: 5px 8px;
+            background-color: #ff004a;
+        }
+
+        div.backDiv {
+            width: 80px;
+            height: 70px;
+            background-color: #464646;
+            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            margin-bottom: 2px;
+        }
+
+        #puzzleDiv {
+            display: inline-block;
+            color: #555;
+            margin-left: 20%;
+            width: 48%;
+        }
+
+        .right_colum {
+            font-size: 2rem;
+            display: inline-block;
+            text-align: center;
+            color: #555;
+        }
+
+        .right_colum>input {
+            display: inline-block;
+        }
+
+        .right_colum h2 {
+            text-transform: uppercase;
+            font-size: 3rem;
+            white-space: nowrap;
+        }
+
+        .star_end {
+            display: block;
+            margin: 34% 0 70% 0;
+        }
+
+        .star_end>input:nth-child(1) {
+            margin-right: 16px;
+        }
+        .time_b {width:250px;}
+
+    </style>
+</head>
+
+<body onload="initPage();">
+    <!-- 퍼즐 테이블 DIV -->
+    <div id="puzzleDiv"></div>
+
+    <div class="right_colum">
+        <!-- 사이즈 변경 -->
+        <input type="button" value="reset" onclick="initGame(SIZE_MEDIUM);">
+        
+        <!-- 게임 시작과 끝 블럭 -->
+        <div class="star_end">
+
+            <input type="button" value="start" onclick="startGame();">
+            <input type="button" value="end" onclick="endGame();">
+        </div>
+        <div class="time_b">
+            <!-- 경과 시간 표시 -->
+            <span>time:</span> <span id="timeSpan">0</span> <span>s</span>
+            <div id="debugDiv"></div>
+        </div>
+    </div>
+
+    <script src="../game/match.js"></script>
+
+</body>
+</html>

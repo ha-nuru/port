@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+@keyframes shift {
+
+    to {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes crt-flicker {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*section1 mImg*/
+
+@keyframes tilt {
+  0% {
+	  transform:scale(.4) rotate(0deg);
+  }
+  100% {
+	  transform:scale(.4) rotate(-50deg);}
+}
+
+/*section2*/
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes continue {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+/*ImgMove*/
+@keyframes shift6 {
+ from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+
+.marquee-nav {
+    white-space: nowrap;
+    display: flex;
+    animation-name: kf_page_title;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    /*will-change: transform;*/
+    position: absolute;
+    animation-play-state: running;
+    top: 0;
+    left: 0;
+}
+
+
+.marquee-nav_l {
+    white-space: nowrap;
+    display: flex;
+    animation-name: kf_page_title1;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    /*will-change: transform;*/
+    position: absolute;
+    animation-play-state: running;
+    top: 0;
+    right: 0;
+}
+
+
+@keyframes kf_page_title {
+    0% {
+        -webkit-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(-25%, 0, 0);
+        transform: translate3d(-25%, 0, 0);
+    }
+}
+
+@keyframes kf_page_title1 {
+    0% {
+        -webkit-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(25%, 0, 0);
+        transform: translate3d(25%, 0, 0);
+    }
+}
+
+.pattern {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    background-repeat: no-repeat;
+    transition: opacity .2s ease-in;
+    transition-property: height, width, color, background-color, opacity;
+    opacity: 0;
+    background-size: cover;
+    background-position: center center;
+    /*transition-duration: 500ms;
+	transition-timing-function: ease-out;
+	transform: translate3d(-50%,-50%, 0);
+	will-change: transform;*/
+
+}
+
+@keyframes shift-alt {
+	
+	to {
+	background-position:-100% bottom;
+	}
+}

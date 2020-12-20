@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Tetris</title>
+	<meta property="og:title" content="JavaScript Tetris" />
+	<meta name="description" content="Tetris game made with modern JavaScript.">
+	<meta name="twitter:description" content="Tetris game made with modern Javascript.">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@melcor76" />
+	<meta name="keywords" content="JavaScript, Tetris">
+	<meta name="author" content="Michael Karén">
+	<meta property="og:image" />
+	<link rel="stylesheet" href="https://use.typekit.net/ynv7kns.css">
+	<style>
+		* {
+			font-family: lores-9-narrow, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		body {
+			margin: auto;
+		}
+
+		.tetris_wrap {
+			width: 100%;
+			display: inline-flex;
+			padding-top: 56px;
+			box-sizing: border-box;
+		}
+
+		.grid {
+			margin: 0 0 0 20%;
+			display: grid;
+			grid-template-columns: 500px 100px;
+		}
+
+		.right-column {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+
+
+		.right-column p {
+			font-size: 2rem;
+			color: #555;
+			width: 300px;
+		}
+
+		.game-board {
+			border: solid 4px;
+			display: inline-block;
+			color: #555;
+			padding-top: 80px;
+			margin-left: 5%;
+			height: 500px;
+		}
+
+		.play-button {
+			background-color: #ff004a;
+			font-size: 1.5rem;
+			padding: 15px 30px;
+			cursor: pointer;
+			color: #000;
+			width: 58%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="tetris_wrap">
+		<div class="grid">
+			<canvas id="board" class="game-board"></canvas>
+		</div>
+		<div class="right-column">
+			<div>
+				<p>Score: <span id="score">0</span></p>
+				<p>Lines: <span id="lines">0</span></p>
+				<p>Level: <span id="level">0</span></p>
+				<canvas id="next" class="next"></canvas>
+			</div>
+			<button onclick="play()" class="play-button">Play</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="constants.js"></script>
+	<script type="text/javascript" src="board.js"></script>
+	<script type="text/javascript" src="piece.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+</body></html>
