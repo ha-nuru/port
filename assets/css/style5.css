@@ -1043,13 +1043,10 @@ body {
 	color: #fff;
 	white-space: nowrap;
 	position: absolute;
-	top: 6rem;
+	top: 10vh;
 }
 .monitor .screnC .s_stext {
-	top: 8rem;
-}
-.monitor .screnH .s_stext {
-	top: 8rem;
+    top: 12vh;
 }
 .monitor .s_stext span {
 	display: inline-block;
@@ -1478,12 +1475,14 @@ label.toggle_item {
 	display: none;
 	font-weight: 700;
 	font-size: 2rem;
-	color: #ff004a;
+    color: #ff004a;
+    text-transform: capitalize;
 	background-image: none;
 }
 .sec6_nav .nav_W a:nth-child(odd){
 	font-size: 1.4rem;
-	font-weight: 500;
+    font-weight: 500;
+    text-transform: inherit;
 	transition: all 0.5s;
 }
 .sec6_nav .nav_W a:nth-child(odd):hover{
@@ -1515,19 +1514,6 @@ label.toggle_item {
 	width: 100%;
 	box-sizing: border-box;
 }
-/* .script_w {
-	width: 100%;
-	margin: 0 auto;
-	color: #ff004a;
-	box-shadow: 5px 5px 0px 0px;
-	border: 1px solid;
-	border-radius: 0;
-	overflow: hidden;
-	position: relative;
-	z-index: 1;
-	display: inline-flex;
-	height: 700px;
-} */
 .ha_study{
 	display: flex;
     flex-flow: wrap;
@@ -1536,7 +1522,7 @@ label.toggle_item {
 .ha_study > div{
 	position: relative;
     width: 19%;
-    margin: 2% 3%;
+	margin: 2% 7%;
     padding: 2% 1% 4%;
     display: flex;
     flex-direction: column;
