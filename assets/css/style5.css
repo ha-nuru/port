@@ -74,16 +74,15 @@ body {
 }
 .load_imogi {
 	position: fixed;
-	left: 0px;
-	top: -30px;
-	width: 100%;
-	height: 100%;
-	background-image: url(../img/sec2_imogi.gif);
-	background-repeat: no-repeat;
-	background-size: 10%;
-	background-position: center;
-	z-index: 400;
-
+    left: 0px;
+    top: -3vh;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/sec2_imogi.gif);
+    background-repeat: no-repeat;
+    background-size: 17vh;
+    background-position: center;
+    z-index: 400;
 }
 /*-------------------------------------------------------*/
 /*main*/
@@ -147,9 +146,9 @@ body {
     height: 16vh;
 }
 .ha_link_btn{
-    left: 57%; 
-    width: 13vh;
-    height: 16vh;
+	left: 57%;
+    width: 14vh;
+    height: 18vh;
 }
 #main_sec .ha_link, #main_sec .work_link {
     display: inline-block;
@@ -165,13 +164,13 @@ body {
     z-index: 20;
 }
 #main_sec .ha_link{
-    background-image: url(../img/sec4_imogi.gif);
+    background-image: url(../img/com_imogi.gif);
 }
 .ha_link_btn .link_box, .work_link_btn .link_box {
 	display: none;
 	position: absolute;
     left: -22vh;
-    top: -40%;
+    top: -43%;
 	padding: 8px;
 	border-radius: 8px;
 	background:  #d3b406;
@@ -181,8 +180,9 @@ body {
     animation: Simogi_H 1s infinite;
 }
 .ha_link_btn .link_box{
-    right: -20vh;
+    right: -15vh;
     left: auto;
+    top: -33%;
 }
 .ha_link_btn .link_box:after, .work_link_btn .link_box:after {
     content: " ";
@@ -716,29 +716,30 @@ body {
 }
 .see_ani {
 	display: none;
-	background: url(../img/loading1.gif) no-repeat;
-	background-size: cover;
-	background-position: top;
-	width: 500px;
-	height: 500px;
-	position: absolute;
-	left: 50%;
-	bottom: 50%;
-	transform: translate(-50%, 50%);
-	z-index: 30;
+    background: url(../img/loading1.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 47vh;
+    height: 49vh;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
 }
 .see_ani:before {
 	content: '';
-	display: block;
-	position: absolute;
-	left: 50%;
-	top: 44%;
-	width: 200px;
-	height: 200px;
-	transform: translate(-50%, -44%);
-	background: url(../img/sec2_imogi.gif) no-repeat;
-	background-size: contain;
-	z-index: 30;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    width: 14vh;
+    height: 18vh;
+    transform: translate(-50%, -47%);
+    background: url(../img/sec2_imogi.gif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 30;
 }
 .skillM_t span {
 	display: inline-block;
@@ -883,7 +884,7 @@ body {
     display: inline-block;
     width: 300px;
 	height: 300px;
-    background-image: url(../img/sec4_imogi.gif);
+    background-image: url(../img/com_imogi.gif);
     background-size: auto 100%;
 	background-color: transparent;
     opacity: 1;
