@@ -21,7 +21,7 @@ body {
 	max-width: 1400px;
 	height: 100%;
 	margin: 0 auto;
-	padding-bottom: 120px;
+	padding-bottom: 7vw;
 }
 #main_sec {
 	height: 100vh;
@@ -52,7 +52,7 @@ body {
 	overflow: hidden;
 }
 #section6 {
-	background-color: #ff004a;
+	background-color: #FFEBEE;
 	overflow: hidden;
 }
 #section7 {
@@ -262,7 +262,7 @@ body {
     transition: all .5s;
 }
 #section1 .Tnav span:nth-child(odd) a:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 #section1 .Tbox {
 	display: flex;
@@ -491,7 +491,7 @@ body {
     transition: all 0.5s;
 }
 .sec2_nav .nav_W a:nth-child(odd):hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 .sec2_imogi {
 	position: relative;
@@ -1446,9 +1446,8 @@ label.toggle_item {
 	line-height: 1;
 }
 .sec6_main {
-	background-color: #FFEBEE;
-	padding: 0 0 5vw 0;
 	position: relative;
+	padding: 11vw 0 2vw;
 }
 .sec6_nav {
 	display: flex;
@@ -1458,7 +1457,7 @@ label.toggle_item {
 	justify-content: center;
 	position: fixed;
 	top: 0px;
-	height: 90px;
+	height: 9vh;
 	white-space: nowrap;
 	box-sizing: border-box;
 	flex-direction: column;
@@ -1469,7 +1468,7 @@ label.toggle_item {
 .sec6_nav .nav_W {
 	box-sizing: border-box;
 	display: flex;
-	width: 80%;
+	width: 70%;
 	max-width: 1400px;
 	margin: 0 auto;
 	align-items: center;
@@ -1477,16 +1476,24 @@ label.toggle_item {
 }
 .sec6_nav .nav_W a {
 	display: none;
-	transform: rotate(0deg);
 	font-weight: 700;
 	font-size: 2rem;
 	color: #ff004a;
 	background-image: none;
 }
-.sec6_nav .nav_W a:nth-child(odd):hover {
-	transform: rotate(15deg);
+.sec6_nav .nav_W a:nth-child(odd){
+	font-size: 1.4rem;
+	font-weight: 500;
+	transition: all 0.5s;
 }
-.sec6_nav .nav_W a:nth-child(2n):hover {
+.sec6_nav .nav_W a:nth-child(odd):hover{
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -2 20 9'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23FF6BE3' stroke-width='2' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	background-size: auto 8px;
+	background-position: bottom;
+	background-repeat: repeat-x;
+	transform: scale(1.2);
+}
+.sec6_nav .nav_W a:nth-child(2):hover {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -2 20 9'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23FF6BE3' stroke-width='2' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 	background-size: auto 8px;
 	background-position: bottom;
@@ -1501,15 +1508,14 @@ label.toggle_item {
 	background-position: bottom;
 	background-repeat: repeat-x;
 	animation: shift-alt 30s linear infinite;
-	background-size: auto 100px;
+	background-size: auto 100%;
 }
 .sec6_main .container {
-	width: 100%;
-	padding: 10rem 0;
-	box-sizing: border-box;
 	position: relative;
+	width: 100%;
+	box-sizing: border-box;
 }
-.script_w {
+/* .script_w {
 	width: 100%;
 	margin: 0 auto;
 	color: #ff004a;
@@ -1521,59 +1527,65 @@ label.toggle_item {
 	z-index: 1;
 	display: inline-flex;
 	height: 700px;
+} */
+.ha_study{
+	display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
-.script_btn {
-	display: block;
-	font-size: 19px;
-	position: absolute;
-	right: 250px;
-	bottom: 124px;
-	color: #333;
-	padding: 1.25em 2em;
-	background: #fff0f0;
-	border: 3px solid #b18597;
-	border-radius: 0.75em;
-	transform-style: preserve-3d;
-	transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background-color 150ms cubic-bezier(0, 0, 0.58, 1);
+.ha_study > div{
+	position: relative;
+    width: 19%;
+    margin: 2% 3%;
+    padding: 2% 1% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ff004a;
+    box-shadow: 5px 5px 0px 0px;
+    border: 1px solid;
+    border-radius: 0;
 }
-.script_btn::before {
-	position: absolute;
-	content: "";
+.ha_study li{
+	text-align: center;
 	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #f9c4d2;
-	border-radius: inherit;
-	box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
-	transform: translate3d(0, 0.75em, -1em);
-	transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
-		box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+	position: relative;
 }
-.script_btn:hover {
-	background: #ffe9e9;
-	-webkit-transform: translate(0, 0.25em);
-	transform: translate(0, 0.25em);
+.ha_study div li a{
+	display: block;
+    width: 100%;
+	background: url(../img/slider_st1.png) no-repeat;
+	background-size: cover;
+	height: 17vh;
+	background-position: center;
 }
-.script_btn:hover::before {
-	box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
-	-webkit-transform: translate3d(0, 0.5em, -1em);
-	transform: translate3d(0, 0.5em, -1em);
+.ha_study div:nth-child(1) a{
+    background-image: url(../img/slider_st1.png);
 }
-.script_btn:active {
-	background: #ffe9e9;
-	-webkit-transform: translate(0em, 0.75em);
-	transform: translate(0em, 0.75em);
+.ha_study div:nth-child(2) li a{
+	display: block;
+    background-image: url(../img/man_svg.png);
 }
-.script_btn:active::before {
-	box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-	-webkit-transform: translate3d(0, 0, -1em);
-	transform: translate3d(0, 0, -1em);
+.ha_study div:nth-child(3) a, .ha_study div:nth-child(4) a, .ha_study div:nth-child(5) a{
+	background-image: url(../img/prepare.png);
+    height: 14vh;
 }
-/*script code 모달*/
+.ha_study h5{
+	display: inline-block;
+	text-transform: capitalize;
+	margin-top: 2vh;
+	font-size: 1rem;
+	border-bottom: 2px solid #ff004a;
+}
+.ha_study li p{
+	display: block;
+	margin-top: 1vh;
+	font-size: 12px;
+	font-weight: 500;
+}
 
+/*script code 모달*/
 .site_modal_wrap3,
 .site_modal_wrap4 {
 	width: 100%;
@@ -1818,40 +1830,38 @@ label.toggle_item {
 }
 .nav_contact {
 	display: flex;
-	width: 100%;
-	text-align: center;
-	padding: 10px 50px 18px;
-	justify-content: center;
 	position: fixed;
 	top: 0px;
-	height: 90px;
+	width: 100%;
+	height: 9vh;
+	background: none;
+	text-align: center;
 	white-space: nowrap;
 	box-sizing: border-box;
+	justify-content: center;
 	flex-direction: column;
-	z-index: 10;
-	background: none;
 	transition: all .1s ease-in-out;
+	z-index: 10;
 }
 .nav_contactW {
-	box-sizing: border-box;
 	display: flex;
-	width: 100%;
+	position: relative;
+	width: 70%;
 	max-width: 1400px;
 	margin: 0 auto;
+	text-align: center;
 	align-items: center;
+	box-sizing: border-box;
 	justify-content: space-between;
-	font-size: 3rem;
-	position: relative;
-	text-align: center
 }
 .navCont_scroll {
 	margin: 0 auto 10px;
 	background-color: transparent;
 	background: url("data:image/svg+xml;charset=UTF-8,%3csvg width='813px' height='84px' viewBox='0 0 813 84' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ctitle%3ewavy_nav0%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cg id='wavy_nav' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg id='Group'%3e%3cpath d='M0,77 C12.4824242,70.3333333 24.8006061,70.3333333 36.9545455,77 C49.1084848,83.6666667 61.4266667,83.6666667 73.9090909,77 C86.3915152,70.3333333 98.709697,70.3333333 110.863636,77 C123.017576,83.6666667 135.335758,83.6666667 147.818182,77 C160.300606,70.3333333 172.618788,70.3333333 184.772727,77 C196.926667,83.6666667 209.244848,83.6666667 221.727273,77 C234.209697,70.3333333 246.527879,70.3333333 258.681818,77 C270.835758,83.6666667 283.153939,83.6666667 295.636364,77 C308.118788,70.3333333 320.43697,70.3333333 332.590909,77 C344.744848,83.6666667 357.06303,83.6666667 369.545455,77 C382.027879,70.3333333 394.346061,70.3333333 406.5,77 C418.653939,83.6666667 430.972121,83.6666667 443.454545,77 C455.93697,70.3333333 468.255152,70.3333333 480.409091,77 C492.56303,83.6666667 504.881212,83.6666667 517.363636,77 C529.846061,70.3333333 542.164242,70.3333333 554.318182,77 C566.472121,83.6666667 578.790303,83.6666667 591.272727,77 C603.755152,70.3333333 616.073333,70.3333333 628.227273,77 C640.381212,83.6666667 652.699394,83.6666667 665.181818,77 C677.664242,70.3333333 689.982424,70.3333333 702.136364,77 C714.290303,83.6666667 726.608485,83.6666667 739.090909,77 C751.573333,70.3333333 763.891515,70.3333333 776.045455,77 C788.199394,83.6666667 800.517576,83.6666667 813,77' id='line' stroke='%23fe4600' stroke-width='3'%3e%3c/path%3e%3cpath d='M0,77.1075176 C12.4824242,70.5842078 24.8006061,70.5842078 36.9545455,77.1075176 C49.1084848,83.6308275 61.4266667,83.6308275 73.9090909,77.1075176 C86.3915152,70.5842078 98.709697,70.5842078 110.863636,77.1075176 C123.017576,83.6308275 135.335758,83.6308275 147.818182,77.1075176 C160.300606,70.5842078 172.618788,70.5842078 184.772727,77.1075176 C196.926667,83.6308275 209.244848,83.6308275 221.727273,77.1075176 C234.209697,70.5842078 246.527879,70.5842078 258.681818,77.1075176 C270.835758,83.6308275 283.153939,83.6308275 295.636364,77.1075176 C308.118788,70.5842078 320.43697,70.5842078 332.590909,77.1075176 C344.744848,83.6308275 357.06303,83.6308275 369.545455,77.1075176 C382.027879,70.5842078 394.346061,70.5842078 406.5,77.1075176 C418.653939,83.6308275 430.972121,83.6308275 443.454545,77.1075176 C455.93697,70.5842078 468.255152,70.5842078 480.409091,77.1075176 C492.56303,83.6308275 504.881212,83.6308275 517.363636,77.1075176 C529.846061,70.5842078 542.164242,70.5842078 554.318182,77.1075176 C566.472121,83.6308275 578.790303,83.6308275 591.272727,77.1075176 C603.755152,70.5842078 616.073333,70.5842078 628.227273,77.1075176 C640.381212,83.6308275 652.699394,83.6308275 665.181818,77.1075176 C677.664242,70.5842078 689.982424,70.5842078 702.136364,77.1075176 C714.290303,83.6308275 726.608485,83.6308275 739.090909,77.1075176 C751.573333,70.5842078 763.891515,70.5842078 776.045455,77.1075176 C788.199394,83.6308275 800.517576,83.6308275 813,77.1075176 L813,0 L0,0 L0,77.1075176 Z' id='background' fill='%23ffeae2'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
 	background-position: bottom;
+	background-size: auto 100%;
 	background-repeat: repeat-x;
 	animation: shift-alt 30s linear infinite;
-	background-size: auto 100px;
 }
 .nav_contactW .contactN {
 	position: relative;
@@ -1862,9 +1872,12 @@ label.toggle_item {
 	-ms-animation: vertical 1.5s 9999 ease 2s;
 	animation: vertical 1.5s 9999 ease 1.2s
 }
-.contactN a {
+.nav_contactW .contactN a {
 	display: inline-block;
 	width: 100%;
+}
+.nav_contactW .contactN:nth-child(odd) a{
+	font-size: 4.5vh;
 }
 .nav_contactW:hover .contactN {
 	animation: paused;
@@ -1940,7 +1953,7 @@ label.toggle_item {
 	top: 0;
 	animation: Simogi_H 1s infinite;
 }
-.haneul_imogi {
+.nav_contactW  .haneul_imogi {
 	font-size: 2rem;
 	color: #fe4600;
 	z-index: 5;

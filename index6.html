@@ -235,10 +235,18 @@
 				</div>
 				<div>
 					<li class="logo_S">
-						<img src="assets/img/svg.png" alt="">
+						<img src="assets/img/adobeXd.png" alt="">
 					</li>
 					<div class="graph">
-						<span>80%</span>
+						<span>70%</span>
+					</div>
+				</div>
+				<div>
+					<li class="logo_S">
+						<img src="assets/img/figma.png" alt="">
+					</li>
+					<div class="graph">
+						<span>60%</span>
 					</div>
 				</div>
 			</ul>
@@ -275,7 +283,6 @@
 				triggerHook: .9,
 				offset: 300
 			})
-
 			.setClassToggle(".mov_txt1", "visible")
 			.addTo(controller)
 
@@ -285,10 +292,8 @@
 				triggerHook: .9,
 				offset: 400
 			})
-
 			.setClassToggle(".mov_txt2", "visible")
 			.addTo(controller)
-
 
 		var controller = new ScrollMagic.Controller();
 		var scene3 = new ScrollMagic.Scene({
@@ -296,10 +301,8 @@
 				triggerHook: .9,
 				offset: 500
 			})
-
 			.setClassToggle(".mov_txt3", "visible")
 			.addTo(controller)
-
 
 		/*마우스 오버 이미지*/
 		$(document).mousemove(function(e) {
@@ -308,14 +311,12 @@
 				top: e.pageY + -300
 			});
 		});
-
 		$('.skillM_t a').mouseover(function() {
 			$(this).siblings().css('display', 'block')
 		});
 		$('.skillM_t a').mouseleave(function() {
 			$(this).siblings().css('display', 'none')
 		});
-
 
 		/*section2 - nav*/
 		var nav_ind6 = $("#section2").offset();
@@ -333,7 +334,6 @@
 		});
 
 		/*스킬 퍼센트 애니메이션*/
-
 		$(window).scroll(function() {
 			let scroll = $(window).scrollTop() + 400;
 			if (scroll >= $("#section3").offset().top) {
@@ -368,6 +368,13 @@
 				gsap.to(".logo_W >div:nth-of-type(7) .graph span", {
 					duration: 1,
 					width: 80 + '%',
+					ease: Bounce.easeOut,
+					stagger: 1,
+					opacity: 1
+				})
+				gsap.to(".logo_W >div:nth-of-type(8) .graph span", {
+					duration: 1,
+					width: 70 + '%',
 					ease: Bounce.easeOut,
 					stagger: 1,
 					opacity: 1

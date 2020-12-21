@@ -1,8 +1,4 @@
-      // favicon
-
-
-      /*section2 이모지 폰트 움직이기*/
-
+	  /*section2 이모지 폰트 움직이기*/
       $(document)
       	.ready(function () {
       		let current_class_index = 0;
@@ -11,7 +7,6 @@
                 ];
       		let current_class = '';
       		const target_element = $('.yo');
-
       		$('.marquee')
       			.marqueeify({
       				speed: 350,
@@ -25,25 +20,21 @@
       					}
       					target_element.addClass(new_class);
       					current_class = new_class;
-
       				}
       			});
-      	});
-
-
+			  });
+			  
       /*section2 이모지 움직이기*/
-
       (function ($, window, undefined) {
       	$.fn.marqueeify = function (options) {
       		var settings = $.extend({
       			horizontal: true,
       			vertical: true,
-      			speed: 60, // In pixels per second
+      			speed: 60, 
       			container: $(this)
       				.parent(),
       			bumpEdge: function () {}
       		}, options);
-
       		return this.each(function () {
       			var containerWidth, containerHeight, elWidth, elHeight, move, getSizes,
       				$el = $(this);
@@ -54,7 +45,6 @@
       				elWidth = $el.outerWidth();
       				elHeight = $el.outerHeight();
       			};
-
       			move = {
       				right: function () {
       					$el.animate({
@@ -109,26 +99,22 @@
       					});
       				}
       			};
-
       			getSizes();
-
       			if (settings.horizontal) {
       				move.right();
       			}
       			if (settings.vertical) {
       				move.down();
       			}
-
       			$(window)
       				.resize(function () {
       					getSizes();
       				});
-      		});
-      	};
+      			});
+      		};
       })(jQuery, window);
 
-
-      /*section2 배너 움직이기*/
+	  /*section2 배너 움직이기*/
       $('.about-marquee').marquee({
       	duration: 21000,
       	gap: 0,
@@ -138,7 +124,6 @@
       	startVisible: true,
       	pauseOnHover: true,
       });
-
 
       /*탭메뉴*/
       $('ul.tabs li').click(function () {

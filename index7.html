@@ -750,710 +750,45 @@ $('#header .btn_nav').click(function() {
 	</section>
 	<!--//site-->
 	<section id="section6">
-		<div class="ani_bg">
-			<div class="sec6_T top-crop">
-				<div class="ani_m">
-					<div class="marquee-nav">
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-					</div>
-				</div>
-			</div>
-			<div class="sec6_T top-crop">
-				<div class="ani_m">
-					<div class="marquee-nav">
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-					</div>
-				</div>
-			</div>
-			<div class="sec6_T">
-				<h3>script</h3>
-			</div>
-			<div class="sec6_T bottom-crop">
-				<div class="ani_m">
-					<div class="marquee-nav_l">
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="sec6_T bottom-crop">
-				<div class="ani_m">
-					<div class="marquee-nav_l">
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-						<span>script script script</span>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="sec6_main">
 			<nav class="sec6_nav">
 				<div class="nav_W">
-					<a href="#">😘</a>
-					<a href="#">tetris</a>
-					<a href="#">📁</a>
+					<a href="https://github.com/ha-nuru" target="_blank">github</a>
+					<a href="#a">#ha_study</a>
+					<a href="http://gkdk4195.cafe24.com/publisher_resume.pdf" target="_blank">resume</a>
 				</div>
 			</nav>
 			<div class="container">
-				<div class="script_w">
-					<iframe src="tetris/index.html" style="width:100%; height:700px; margin:0 auto;" frameborder="0"></iframe>
-				</div>
-			</div>
-			<a href="#" class="site_tri3 script_btn">veiw sorce</a>
-		</div>
-		<div class="sec6_main">
-			<!--    <nav class="sec6_nav sec6_t_bg">
-                    <div class="nav_W">
-                        <a href="#">😘</a>
-                        <a href="#">card match</a>
-                        <a href="#">📁</a>
-                    </div>
-                </nav>-->
-			<div class="container">
-				<div class="script_w">
-					<iframe src="./game/match1.html" style="width:100%; height:700px; margin:0 auto;" frameborder="0"></iframe>
-				</div>
-			</div>
-			<a href="#" class="site_tri4 script_btn">veiw sorce</a>
-		</div>
-		<div class="site_modal_wrap3">
-			<div class="site_modal">
-				<a class="btn_close site_tri3" href="#">
-					<span>X</span>
-				</a>
-				<div class="site_wrap">
-					<div class="tab_wrap" data-num="3">
-						<div class="tab_mode">
-							<div class="toggle_wrapper">
-								<div class="toggle moon_rollover">
-									<input id="moon" type="checkbox">
-									<label class="toggle_item" for="moon"></label>
-									<div class="moon_img">
-										<div></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="tab_btn">
-							<ul>
-								<li class='active'><a href="#">main.js</a></li>
-								<li><a href="#">board.js</a></li>
-								<li><a href="#">piece.js</a></li>
-								<li><a href="#">constants.js</a></li>
-								<li><a href="#">css</a></li>
-							</ul>
-						</div>
-						<!--//tab_btn-->
-						<div class="tab_cont">
-							<div>
-								<pre class="line-numbers"><code class="language-js">/*main.js*/
-let board = new Board();
-
-function play() {
-  board.reset();
-  console.table(board.grid);
-}
-//Play 버튼을 누를 때 main.js 파일에서 이 함수를 호출한다. 
-
-function play() {
-  board = getEmptyBoard();
-  let piece = new Piece(ctx);
-  piece.draw();
-  
-  board.piece = piece;
-}
-//보드는 테트로미노의 이동 경로를 추적하므로, 게임을 시작하면 테트로미노를 생성하고 그릴 수 있다.
-
-document.addEventListener('keydown', event => {
-  if (moves[event.keyCode]) {  
-    // 이벤트 버블링을 막는다.
-    event.preventDefault();
-    
-    // 조각의 새 상태를 얻는다.
-    let p = moves[event.keyCode](board.piece);
-    
-    if (board.valid(p)) {    
-      // 이동이 가능한 상태라면 조각을 이동한다.
-      board.piece.move(p);
-      
-      // 그리기 전에 이전 좌표를 지운다.
-      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); 
-      
-      board.piece.draw();
-    }
-  }
-});
-
-const KEY = {  
-  SPACE: 32,
-  // ...
-}
-
-moves = {  
-  [KEY.SPACE]: p => ({ ...p, y: p.y + 1 })
-  // ...
-};
-
-// 이벤트 리스너 안에서
-if (event.keyCode === KEY.SPACE) {
-  // 하드 드롭한다.
-  while (board.valid(p)) {
-    board.piece.move(p);   
-    p = moves[KEY.DOWN](board.piece);
-  }
-}
-
-function animate(now = 0) {
-  // 지난 시간을 업데이트한다.
-  time.elapsed = now - time.start;
-  
-  // 지난 시간이 현재 레벨의 시간을 초과했는지 확인한다.
-  if (time.elapsed > time.level) {
-  
-    // 현재 시간을 다시 측정한다.
-    time.start = now;   
-    
-    this.drop();  
-  }
-  
-  // 새로운 상태로 그리기 전에 보드를 지운다.
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); 
-  
-  board.draw();  
-  requestId = requestAnimationFrame(animate);
-}
-
-let accountValues = {
-  score: 0,
-  lines: 0
-}
-
-function updateAccount(key, value) {
-  let element = document.getElementById(key);
-  if (element) {
-    element.textContent = value;
-  }
-}
-
-let account = new Proxy(accountValues, {
-  set: (target, key, value) => {
-    target[key] = value;
-    updateAccount(key, value);
-    return true;
-  }
-}
-//account 객체 변경사항 처리
-
-getLineClearPoints(lines) {  
-  return lines === 1 ? Points.SINGLE :
-         lines === 2 ? Points.DOUBLE :  
-         lines === 3 ? Points.TRIPLE :     
-         lines === 4 ? Points.TETRIS : 
-         0;
-}
-//블록 줄을 지웠을 때 점수이다. 줄 수에 따라 점수를 정의한다.
-
-function gameOver() {
-  cancelAnimationFrame(requestId);
-  this.ctx.fillStyle = 'black';
-  this.ctx.fillRect(1, 3, 8, 1.2);
-  this.ctx.font = '1px Arial';
-  this.ctx.fillStyle = 'red';
-  this.ctx.fillText('GAME OVER', 1.8, 4);
-}
-//게임을 종료하기
-
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js">/*board.js*/
-class Board {
-  grid;
-  
-  // 새 게임이 시작되면 보드를 초기화한다.
-  reset() {
-    this.grid = this.getEmptyBoard();
-  }
-  
-  // 0으로 채워진 행렬을 얻는다.
-  getEmptyBoard() {
-    return Array.from(
-      {length: ROWS}, () => Array(COLS).fill(0)
-    );
-  }
-}
-
-valid(p) {
-  return p.shape.every((row, dy) => {
-    return row.every((value, dx) => {
-      let x = p.x + dx;
-      let y = p.y + dy;
-      return (
-        this.isEmpty(value) ||
-       (this.insideWalls(x) &#38;&#38;
-        this.aboveFloor(y)
-      );
-    });
-  });
-}
-
-// 행렬을 변환한다. p는 Piece의 인스턴스이다.
-for (let y = 0; y < p.shape.length; ++y) {
-  for (let x = 0; x < y; ++x) {
-    [p.shape[x][y], p.shape[y][x]] = 
-    [p.shape[y][x], p.shape[x][y]];
-  }
-}
-
-// 열 순서대로 뒤집는다.
-p.shape.forEach(row => row.reverse());
-
-rotate(p){
-  // 불변성을 위해 JSON으로 복사
-  let clone: IPiece = JSON.parse(JSON.stringify(p));
-  
-  // 알고리즘 처리
-  
-  return clone;
-}
-
-[KEY.UP]: (p) => this.rotate(p)
-
-freeze() {
-  this.piece.shape.forEach((row, y) => {
-    row.forEach((value, x) => {
-      if (value > 0) {
-        this.grid[y + this.piece.y][x + this.piece.x] = value;
-      }
-    });
-  });
-}
-//고정하기
-
-drawBoard() {
-  this.grid.forEach((row, y) => {
-    row.forEach((value, x) => {
-      if (value > 0) {
-        this.ctx.fillStyle = COLORS[value];
-        this.ctx.fillRect(x, y, 1, 1);
-      }
-    });
-  });
-}
-
-draw() {
-  this.piece.draw();
-  this.drawBoard();
-}
-//보드 그리는 함수
-
-this.grid.forEach((row, y) => {
-
-  // 모든 값이 0보다 큰지 비교한다.
-  if (row.every(value => value > 0)) {
-  
-    // 행을 삭제한다.
-    this.grid.splice(y, 1);
-    
-    // 맨 위에 0으로 채워진 행을 추가한다.
-    this.grid.unshift(Array(COLS).fill(0));
-  } 
-});
-
-getLineClearPoints(lines) {  
-  return lines === 1 ? Points.SINGLE :
-         lines === 2 ? Points.DOUBLE :  
-         lines === 3 ? Points.TRIPLE :     
-         lines === 4 ? Points.TETRIS : 
-         0;
-}
-
-clearLines() {
-  let lines = 0;
-  this.board.forEach((row, y) => {    
-    if (row.every(value => value !== 0)) {      
-      lines++; // 지워진 줄 수를 증가시킨다.
-      this.board.splice(y, 1); 
-      this.board.unshift(Array(COLS).fill(0));
-    }  
-  });  
-  if (lines > 0) {    
-    // 지워진 줄이 있다면 점수를 더한다.
-    account.score += this.getLineClearPoints(lines);  
-  }
-}
-
-if (lines > 0) {
-  // 지워진 줄과 레벨로 점수를 계산한다.
-  
-  account.score += this.getLinesClearedPoints(lines, this.level);
-  account.lines += lines;
-  
-  // 다음 레벨에 도달할 수 있는 줄 수가 되었다면
-  if (account.lines >= LINES_PER_LEVEL) {
-    
-    // 레벨 값을 증가시킨다.
-    account.level++;
-    
-    // 다음 레벨을 시작하기 위해 줄을 지운다.
-    account.lines -= LINES_PER_LEVEL;
-    
-    // 게임 속도를 올린다.
-    time.level = Level[account.level];
-  }
-}
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js">/*piece.js*/
-class Piece {
-  x;
-  y;
-  color;
-  shape;
-  ctx;
-  
-  constructor(ctx) {
-    this.ctx = ctx;
-    this.spawn();
-  }
-  
-  spawn() {
-    this.color = 'blue';
-    this.shape = [
-      [2, 0, 0], 
-      [2, 2, 2], 
-      [0, 0, 0]
-    ];
-    
-    // Starting position.
-    this.x = 3;
-    this.y = 0;
-  }
-}
-
-draw() {
-  this.ctx.fillStyle = this.color;
-  this.shape.forEach((row, y) => {
-    row.forEach((value, x) => {
-      // this.x, this.y는 shape의 상단 왼쪽 좌표이다
-      // shape 안에 있는 블록 좌표에 x, y를 더한다.
-      // 보드에서 블록의 좌표는 this.x + x가 된다.
-      if (value > 0) {
-        this.ctx.fillRect(this.x + x, this.y + y, 1, 1);
-      }
-    });
-  });
-}
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js">/* constants.js */
-const KEY = {
-  LEFT: 37,
-  RIGHT: 39,
-  DOWN: 40
-}
-Object.freeze(KEY);
-
-const COLORS = [  
-  'cyan',
-  'blue',
-  'orange',
-  'yellow',
-  'green',
-  'purple',
-  'red'
-];
-
-const SHAPES = [  
-  [
-    [0, 0, 0, 0], 
-    [1, 1, 1, 1],
-    [0, 0, 0, 0], 
-    [0, 0, 0, 0]
-  ], 
-  [
-    [2, 0, 0],
-    [2, 2, 2],
-    [0, 0, 0]
-  ],
-  // 등등
-];
-
-randomizeTetrominoType(noOfTypes) {
-  return Math.floor(Math.random() * noOfTypes);
-}
-//한 조각을 선택하기 위해 조각들의 인덱스를 랜덤화
-const typeId = this.randomizeTetrominoType(COLORS.length);
-this.shape = SHAPES[typeId];
-this.color = COLORS[typeId];
-//색상과 모양을 적용
-
-const POINTS = {
-  SINGLE: 100,
-  DOUBLE: 300,
-  TRIPLE: 500,
-  TETRIS: 800,
-  SOFT_DROP: 1,
-  HARD_DROP: 2
-}
-Object.freeze(POINTS);
-
-const LINES_PER_LEVEL = 10;
-
-const LEVEL = {
-  0: 800,
-  1: 720,
-  2: 630,
-  3: 550,
-  // ...
-}
-
-Object.freeze(LEVEL);
-//난이도
-
-let accountValues = {
-  score: 0,
-  lines: 0,
-  level: 0
-}
-//스코어
-
-function resetGame() {
-  account.score = 0;
-  account.lines = 0;
-  account.level = 0;
-  board = this.getEmptyBoard();
-}
-//게임 초기화
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-css">/* css */
-* {
-  font-family: 'Press Start 2P', cursive;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 320px 200px;
-}
-
-.right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.game-board {
-  border: solid 2px;
-}
-
-.play-button {
-  background-color: #4caf50;
-  font-size: 16px;
-  padding: 15px 30px;
-  cursor: pointer;
-}
-</code></pre>
-							</div>
-						</div>
+				<ul class="ha_study">
+					<div>
+						<li><a href="#a"></a>
+							<h5>distorting_slider</h5>
+							<p>hover.js/glide.js/three.js</p>
+						</li>
 					</div>
-					<!--//tab_wrap-->
-				</div>
-				<!--//tab_bg-->
-			</div>
-		</div>
-		<!-- Modal2 -->
-		<div class="site_modal_wrap4">
-			<div class="site_modal">
-				<a class="btn_close site_tri4" href="#">
-					<span>X</span>
-				</a>
-				<div class="site_wrap">
-					<div class="tab_wrap" data-num="4">
-						<div class="tab_mode">
-							<div class="toggle_wrapper">
-								<div class="toggle moon_rollover">
-									<input id="moon" type="checkbox">
-									<label class="toggle_item" for="moon"></label>
-									<div class="moon_img">
-										<div></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="tab_btn">
-							<ul>
-								<li class='active'><a href="#">card flip</a></li>
-								<li><a href="#">game reset</a></li>
-								<li><a href="#">random</a></li>
-								<li><a href="#">xxxx</a></li>
-								<li><a href="#">xxxx</a></li>
-							</ul>
-						</div>
-						<!--//tab_btn-->
-						<div class="tab_cont">
-							<div>
-								<pre class="line-numbers"><code class="language-js"> /*카드뒤집기*/
-        function turnOver(evt, i, j) {
-            if (!startFlag) return;
-            if (statusArray[i][j] != BACK_STATUS) return;
-
-            //상태와 색 변경
-            statusArray[i][j] = TEMP_FRONT_STATUS;
-            cardArray[i][j].style.backgroundColor = colorArray[i][j];
-            cardArray[i][j].innerHTML = dataArray[i][j];
-
-            if (turnCount == 0) { //첫 번째 뒤집음
-                turnCount++;
-            } else if (turnCount >= 1) { //두 번째 뒤집음
-                turnCount = 0;
-
-                //첫 번째로 뒤집어 놓은 카드 찾음
-                var oneTurnRowIndex = -1;
-                var oneTurnColIndex = -1;
-                for (var k = 0; k &#60; rowSize; k++) {
-                    for (var l = 0; l &#60; colSize; l++) {
-                        if (k != i || l != j) {
-                            if (statusArray[k][l] == TEMP_FRONT_STATUS) {
-                                oneTurnRowIndex = k;
-                                oneTurnColIndex = l;
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (oneTurnRowIndex == -1 || oneTurnColIndex == -1) {
-                    //카드 되돌리는 타이머 시작
-                    cardTimer = setTimeout(returnBack, 400);
-                    return;
-                }
-
-                //같으면
-                if (dataArray[i][j] == dataArray[oneTurnRowIndex][oneTurnColIndex]) {
-                    statusArray[i][j] = FRONT_STATUS;
-                    statusArray[oneTurnRowIndex][oneTurnColIndex] = FRONT_STATUS;
-
-                    //게임 종료 체크
-                    checkEnd();
-                } else {
-                    //카드 되돌리는 타이머 시작
-                    cardTimer = setTimeout(returnBack, 400);
-                }
-            }
-        }
-
-        //다시 되돌리기
-        function returnBack() {
-            for (var i = 0; i &#60; rowSize; i++) {
-                for (var j = 0; j &#60; colSize; j++) {
-                    if (statusArray[i][j] == TEMP_FRONT_STATUS) {
-                        statusArray[i][j] = BACK_STATUS;
-                        cardArray[i][j].style.backgroundColor = "gray";
-                        cardArray[i][j].innerHTML = "";
-                    }
-                }
-            }
-
-            clearTimeout(cardTimer);
-        }
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js">/*game reset*/
-        function initData() {
-            pairsArray = new Array();
-            for (var i = 0; i &#60; pairCount / 2; i++) {
-                var j = i * 2;
-                var colorCode = getRandomColor();
-
-                pairsArray[j] = new Array();
-                pairsArray[j][0] = i;
-                pairsArray[j][1] = colorCode;
-
-                pairsArray[j + 1] = new Array();
-                pairsArray[j + 1][0] = i;
-                pairsArray[j + 1][1] = colorCode;
-            }
-
-            dataArray = new Array();
-            colorArray = new Array();
-            statusArray = new Array();
-            for (var i = 0; i &#60; rowSize; i++) {
-                dataArray[i] = new Array();
-                colorArray[i] = new Array();
-                statusArray[i] = new Array();
-                for (var j = 0; j &#60; colSize; j++) {
-                    var randomIndex = Math.floor(Math.random() * pairCount);
-                    if (pairsArray[randomIndex][0] != -1) {
-                        dataArray[i][j] = pairsArray[randomIndex][0];
-                        colorArray[i][j] = pairsArray[randomIndex][1];
-
-                        //할당했으면 -1을 지정하여 비활성화
-                        pairsArray[randomIndex][0] = -1;
-
-                        statusArray[i][j] = BACK_STATUS;
-                        //cardArray[i][j].innerHTML = dataArray[i][j];
-                        cardArray[i][j].innerHTML = "";
-                        cardArray[i][j].style.backgroundColor = "gray";
-                    } else {
-                        //사용하지 않은 숫자가 나올 때까지 반복
-                        j--;
-                    }
-                }
-            }
-        }
-
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js"> //무작위 색 조회
-        function getRandomColor() {
-            var hexaCode = getRandomChar() + getRandomChar() +
-                getRandomChar() + getRandomChar() +
-                getRandomChar() + getRandomChar();
-
-            return "#" + hexaCode;
-        }
-
-        //무작위 16진수 조회
-        function getRandomChar() {
-            var num = Math.floor(Math.random() * 10) + 5;
-            if (num >= 0 &#38;&#38; num &#60; HEXA_ARRAY.length) {
-                return HEXA_ARRAY[num].toUpperCase();
-            } else {
-                return "F";
-            }
-        }
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js">
-</code></pre>
-							</div>
-							<div>
-								<pre class="line-numbers"><code class="language-js">
-</code></pre>
-							</div>
-						</div>
+					<div>
+						<li><a href="#a"></a>
+							<h5>svg_animation</h5>
+							<p>anime.js</p>
+						</li>
 					</div>
-					<!--//tab_wrap-->
-				</div>
-				<!--//tab_bg-->
+					<div>
+						<li><a href="#a"></a>
+							<h5>please wait🙏🏻</h5>
+						</li>
+					</div>
+					<div>
+						<li><a href="#a"></a>
+							<h5>please wait🙏🏻</h5>
+						</li>
+					</div>
+					<div>
+						<li><a href="#a"></a>
+							<h5>please wait🙏🏻</h5>
+						</li>
+					</div>
+				</ul>
 			</div>
-		</div>
 	</section><!-- //section6 -->
 	<section id="section7">
 		<nav class="nav_contact">
@@ -1493,22 +828,9 @@ function resetGame() {
 					<button type="submit" class="contac_btn">💌</button>
 				</form>
 			</div>
-			<!--<div class="contact_icon">
-                        <div class="contI">
-                            <img src="assets/img/cont_imo.png" alt="이모지">
-                        </div>
-                        <div class="contI">
-                            <img src="assets/img/email.png" alt="">
-                        </div>
-                        <div class="contI">
-                            <img src="assets/img/phone.png" alt="">
-                        </div>
-                    </div>-->
 		</div>
-		<a href="#move_index" class="heighttop">
-			💁🏻‍♀️
-			<div class="top_arrow_box">
-				up! </div>
+		<a href="#move_index" class="heighttop">💁🏻‍♀️
+			<div class="top_arrow_box">up!</div>
 		</a>
 	</section>
 	<!-- //contents -->
@@ -1522,17 +844,14 @@ function resetGame() {
 	<script src="assets/js/prism.js"></script>
 	<script src="assets/js/plugin.js"></script>
 	<script src="assets/js/custome.js"></script>
-
-
 	<script>
-		/*슬라이더*/
 
+		/*슬라이더*/
 		$(".center").slick({
 			centerMode: true,
 			slidesToShow: 1,
 			slidesToScroll: 3
 		});
-
 
 		/*section7 컨텍트 ha-neul 이모지*/
 		$('.haneul_imogi').mouseover(function() {
@@ -1541,7 +860,6 @@ function resetGame() {
 		$('.haneul_imogi').mouseleave(function() {
 			$(this).parent().siblings('.imogi_over').css('display', 'none')
 		});
-
 
 		//사이트 인덱스 이미지
 		$(document).mousemove(function(e) {
@@ -1554,7 +872,7 @@ function resetGame() {
 		/*스크립트, 컨택트 nav*/
 		var startchange = $(".sec6_main").eq(0).offset();
 		$(window).scroll(function() {
-			if ($(document).scrollTop() > startchange.top) {
+			if ($(document).scrollTop() > startchange.top - 100) {
 				$(".sec6_nav").css('visibility', 'visible');
 				$(".sec6_nav").addClass('nav_scroll');
 				$('.nav_W').show();
@@ -1563,15 +881,6 @@ function resetGame() {
 				$(".sec6_nav").css('visibility', 'hidden');
 				$(".sec6_nav").removeClass('nav_scroll');
 				$(".nav_W").hide();
-			}
-		});
-
-		$(window).scroll(function() {
-			var startchange1 = $(".sec6_main").eq(1).offset();
-			if ($(document).scrollTop() > startchange1.top - 200) {
-				$(".nav_W a:nth-child(2n)").text('card match');
-			} else {
-				$(".nav_W a:nth-child(2n)").text('tetris');
 			}
 		});
 		var startchange2 = $("#section7").offset();
@@ -1590,7 +899,6 @@ function resetGame() {
 				$(".sec6_nav").show();
 			}
 		});
-
 		/*사이트 인덱스 x 버튼*/
 		$(window).scroll(function() {
 			var startchange5 = $("#site").offset();
