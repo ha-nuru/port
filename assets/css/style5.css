@@ -169,8 +169,8 @@ body {
 .ha_link_btn .link_box, .work_link_btn .link_box {
 	display: none;
 	position: absolute;
-    left: -22vh;
-    top: -43%;
+    left: -20vh;
+    top: -45%;
 	padding: 8px;
 	border-radius: 8px;
 	background:  #d3b406;
