@@ -800,7 +800,11 @@ body {
 .nav_site_index .marquee-nav:hover {
 	animation-play-state: running;
 }
+.nav_site_index a .site_index:nth-child(1) span{
+	margin-left: 0;
+}
 .nav_site_index a .site_index span {
+	margin-left: 5rem;
 	background-color: transparent;
 	font-size: 12vw;
 	line-height: 10vw;
