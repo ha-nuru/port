@@ -146,8 +146,8 @@ body {
     height: 16vh;
 }
 .ha_link_btn{
-	left: 57%;
-    width: 14vh;
+    left: 57%;
+    width: 16vh;
     height: 18vh;
 }
 #main_sec .ha_link, #main_sec .work_link {
@@ -180,7 +180,7 @@ body {
     animation: Simogi_H 1s infinite;
 }
 .ha_link_btn .link_box{
-    right: -15vh;
+    right: -11vh;
     left: auto;
     top: -33%;
 }
