@@ -18,7 +18,7 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 1400px;
+	max-width: 73vw;
 	height: 100%;
 	margin: 0 auto;
 	padding-bottom: 7vw;
@@ -80,7 +80,7 @@ body {
     height: 100%;
     background-image: url(../img/sec2_imogi.gif);
     background-repeat: no-repeat;
-    background-size: 17vh;
+    background-size: 9vw;
     background-position: center;
     z-index: 400;
 }
@@ -439,7 +439,7 @@ body {
 /*section2*/
 
 #section2 .container {
-	max-width: 1500px;
+	max-width: 80vw;
 	padding-top: 8vw;
 	padding-bottom: 4vw;
 	position: relative;
@@ -452,7 +452,7 @@ body {
 	justify-content: center;
 	position: fixed;
 	top: 0px;
-	height: 83px;
+	height: 4.3vw;
 	white-space: nowrap;
 	box-sizing: border-box;
 	flex-direction: column;
@@ -473,7 +473,7 @@ body {
 	box-sizing: border-box;
 	display: flex;
 	width: 80%;
-	max-width: 1400px;
+	max-width: 73vw;
 	margin: 0 auto;
 	align-items: center;
 	justify-content: space-between;
@@ -481,13 +481,13 @@ body {
 .sec2_nav .nav_W a {
 	display: none;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 1.6vw;
 	color: #FB00DB;
 	background-image: none;
 }
 .sec2_nav .nav_W a:nth-child(odd) {
 	font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.2vw;
     transition: all 0.5s;
 }
 .sec2_nav .nav_W a:nth-child(odd):hover{
@@ -524,10 +524,9 @@ body {
 }
 .movet_bg {
 	background-position: bottom;
-	padding-bottom: 7px;
-	margin-bottom: 24px;
+	padding-bottom: 0.5vw;
 	border-bottom-color: transparent;
-	background-size: auto 10px;
+	background-size: auto 0.5vw;
 	background-repeat: repeat-x;
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -2 20 9'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2300e5ff' stroke-width='2' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 }
@@ -538,33 +537,29 @@ body {
 	z-index: 8;
 }
 .sec2_mainT h3 {
-	font-size: 4.5rem;
-	white-space: nowrap;
+	display: inline;
+	font-size: 3.8vw;
 	font-weight: 800;
-	display: inline-block;
-	margin-bottom: 40px;
+	line-height: 2.5;
 }
 .sec2_mainT h3.movet_bg {
 	background-position: bottom;
-	padding-bottom: 14px;
-	margin-bottom: 24px;
+	padding-bottom: 0.7vw;
 	border-bottom-color: transparent;
-	background-size: auto 12px;
+	background-size: auto 0.6vw;
 	background-repeat: repeat-x;
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -2 20 9'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2300e5ff' stroke-width='2' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 }
 .sec2_mainT span {
 	display: inline-block;
-	font-size: 5rem;
-
+	font-size: 5vw;
 }
 .sec2_mainT p {
+    display: inline;
 	font-family: 'DungGeunMo';
-	font-weight: 700;
-	line-height: 1.4;
-	font-size: 2.5rem;
-	display: inline-block;
-	white-space: nowrap;
+    font-weight: 700;
+    font-size: 2.5vw;
+    line-height: 2.2;
 }
 .sec2_boxR {
 	position: relative;
@@ -574,7 +569,7 @@ body {
 }
 .sec2_boxR .sec2_box_img {
 	width: 100%;
-	height: 800px;
+	height: 40vw;
 	margin: 0 auto;
 	background: url(../img/imgcont.png) repeat-x center;
 	background-size: contain;
@@ -583,11 +578,12 @@ body {
 }
 .sec2_bg_text {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 100%;
-	height: 150px;
-	transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 7vw;
+    transform: translate(-50%, -50%);
+    line-height: 7vw;
 }
 .sec2_bg_text .marquee-nav {
 	animation-fill-mode: backwards;
@@ -673,7 +669,7 @@ body {
 	position: relative;
 }
 .logo_W > div:nth-of-type(4) li {
-	margin-top: 69px;
+	margin-top: 3.8vw;
 }
 .logo_W .logo_S:hover {
 	filter: none;
@@ -686,7 +682,7 @@ body {
 	height: 20px;
 	background: #ccc;
 	border-radius: 40px;
-	margin-top: 50px;
+	margin-top: 3vw;
 }
 .graph span {
 	height: 100%;
@@ -696,7 +692,7 @@ body {
 	box-sizing: border-box;
 	display: block;
 	width: 0%;
-	font-size: 35px;
+	font-size: 1.8vw;
 	font-weight: 300;
 	background-color: palevioletred;
 	color: rgb(51, 51, 51);
@@ -707,7 +703,7 @@ body {
 }
 .skillM_t a {
 	display: block;
-	font-size: 140px;
+	font-size: 7.5vw;
 	line-height: 1;
 	width: 100%;
 	text-align: center;
