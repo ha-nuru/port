@@ -204,7 +204,6 @@ body {
 #main_sec .ha_link:hover, #main_sec .work_link:hover{
     filter: none;
 }
-
 .ha_link:hover + .link_box, .work_link:hover + .link_box{
 	display: block;
 	font-size: 2.5vh;
@@ -665,6 +664,7 @@ body {
 .logo_W .logo_S {
 	width: 100%;
 	filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-95deg) saturate(200%) contrast(.8);
+	-webkit-filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-95deg) saturate(200%) contrast(.8);
 	transition: all .1s ease-in;
 	position: relative;
 }
@@ -675,7 +675,6 @@ body {
 	filter: none;
 	opacity: 1;
 	animation: crt-flicker 3ms infinite;
-
 }
 .graph {
 	width: 90%;
@@ -697,6 +696,75 @@ body {
 	background-color: palevioletred;
 	color: rgb(51, 51, 51);
 	opacity: 0;
+}
+.h_link{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	padding-top: 5%;
+}
+.h_link li{
+	position: relative;
+	width: 6%;
+    padding: 0 6%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.h_link li a{
+	display: block;
+	width:100%;
+	height: 6vw;
+	filter: grayscale(26%) brightness(100%) sepia(108%) hue-rotate(-97deg) saturate(200%) contrast(1.5);
+}
+.h_link li a:hover{
+	filter:none;
+	-webkit-filter:none;
+}
+.h_link li a:hover +.h_link_b{
+	display: block;
+}
+.h_link li:nth-child(1) a{
+	background:url(../img/resume.png)no-repeat;
+	background-size:contain;
+	background-position: center;
+}
+.h_link li:nth-child(2) a{
+	background:url(../img/mail.png)no-repeat;
+	background-size:contain;
+	background-position: center;
+}
+.h_link li:nth-child(3) a{
+	background:url(../img/github.png)no-repeat;
+	background-size:contain;
+	background-position: center;
+}
+.h_link .h_link_b{
+	display:none;
+	position: absolute;
+    left: auto;
+    top: -4vw;
+    padding: .5vw;
+    border-radius: 8px;
+    background: #fb00db;
+    color: #fff;
+	font-size: 1.2vw;
+	font-weight: 300;
+}
+.h_link .h_link_b:after{
+	content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    border-width: 0.5vw;
+    border-color: rgba(75, 0, 221, 0);
+    border-top-color: #fb00db;
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 .skillM_t {
 	position: relative;
@@ -816,6 +884,9 @@ body {
 .ind_homedeco span {
 	-webkit-text-stroke-color: #651FFF;
 }
+.ind_almond span {
+	-webkit-text-stroke-color: #029ace;
+}
 .ind_script span {
 	-webkit-text-stroke-color: #ff004a;
 }
@@ -843,6 +914,9 @@ body {
 }
 .ind_homedeco:hover .marquee-nav span {
 	-webkit-text-fill-color: #651FFF;
+}
+.ind_almond:hover .marquee-nav span {
+	-webkit-text-fill-color: #029ace;
 }
 .ind_script:hover .marquee-nav span {
 	-webkit-text-fill-color: #ff004a;
@@ -875,6 +949,16 @@ body {
 	width: 450px;
 	height: 400px;
 	background-image: url(../img/hasol_mov.gif);
+    background-color: transparent;
+    background-size: 100%;
+	opacity: 1;
+	z-index: 0;
+}
+.ind_almond:hover ~ .pattern {
+	display: inline-block;
+	width: 450px;
+	height: 400px;
+	background-image: url(../img/almond_m.gif);
     background-color: transparent;
     background-size: 100%;
 	opacity: 1;
@@ -963,21 +1047,22 @@ body {
 .screnH {
 	background-image: url(../img/honsole.jpg);
 }
-.hiddenS:hover .screnS {
+.screnA {
+	background-image: url(../img/almond.jpg);
+}
+.hiddenS:hover .scren {
 	animation: movetop ease-in-out infinite;
 	animation-direction: alternate;
 	animation-duration: 1.8s;
 }
+.hiddenS:hover .screnS {
+	animation-name: movetop;
+}
 .hiddenS:hover .screnC {
-	animation: movetopC ease-in-out infinite;
-	animation-direction: alternate;
-	animation-duration: 2.8s;
+	animation-name:movetopC;
 }
 .hiddenS:hover .screnH {
 	animation-name: movetopH;
-	animation: movetopH ease-in-out infinite;
-	animation-direction: alternate;
-	animation-duration: 1.8s;
 }
 @keyframes movetop {
 	0% {
@@ -1034,7 +1119,9 @@ body {
 .screnH .stext_w b {
 	color: #6B9DFE;
 }
-
+.screnA .stext_w b {
+	color: #029ace;
+}
 .monitor .s_stext {
 	width: 100%;
 	padding: 0 0 20px;
@@ -1072,6 +1159,9 @@ body {
 }
 .monitor .Hnum {
 	-webkit-text-stroke: 4px #6B9DFE;
+}
+.monitor .Anum {
+	-webkit-text-stroke: 4px #029ace;
 }
 .monitor .button_w {
 	position: absolute;
@@ -1202,6 +1292,16 @@ body {
 		0 0 25px #6B9DFE,
 		0 0 50px #6B9DFE,
 		0 0 200px #6B9DFE;
+}
+.button_w.A_btn a span {
+	background: #029ace;
+}
+.button_w.A_btn a:hover {
+	background: #029ace;
+	box-shadow: 0 0 5px #029ace,
+		0 0 25px #029ace,
+		0 0 50px #029ace,
+		0 0 200px #029ace;
 }
 /*view code 모달*/
 
