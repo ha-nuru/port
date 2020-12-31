@@ -946,8 +946,8 @@ body {
 }
 .ind_homedeco:hover ~ .pattern {
 	display: inline-block;
-	width: 450px;
-	height: 400px;
+	width: 420px;
+	height: 200px;
 	background-image: url(../img/hansol_logo.gif);
     background-color: transparent;
     background-size: 100%;
