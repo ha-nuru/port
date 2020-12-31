@@ -948,7 +948,7 @@ body {
 	display: inline-block;
 	width: 450px;
 	height: 400px;
-	background-image: url(../img/hasol_mov.gif);
+	background-image: url(../img/hansol_logo.gif);
     background-color: transparent;
     background-size: 100%;
 	opacity: 1;
@@ -958,9 +958,9 @@ body {
 	display: inline-block;
 	width: 450px;
 	height: 400px;
-	background-image: url(../img/almond_m.gif);
+	background-image: url(../img/alomond_ind.gif);
     background-color: transparent;
-    background-size: 100%;
+    background-size: contain;
 	opacity: 1;
 	z-index: 0;
 }
