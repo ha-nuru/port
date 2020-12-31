@@ -2075,16 +2075,21 @@ label.toggle_item {
 		transform: translateY(10px);
 	}
 }
+.heighttop_w{
+	display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    right: 9%;
+    bottom: 80px;
+    z-index: 10;
+}
 .heighttop {
 	display: inline-block;
-    position: absolute;
-    right: 7%;
-    bottom: 50px;
     width: 10vh;
     height: 10vh;
     background: url(../img/up.png)no-repeat;
     background-size: contain;
-    z-index: 2000;
 }
 .top_arrow_box {
 	display: block;
