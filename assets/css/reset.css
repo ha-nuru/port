@@ -12,11 +12,11 @@ html, body {
 	scroll-behavior: smooth;
 }
 html, body, h1, iframe {
-	cursor: url(../img/icon_cursor_default.png), default  !important;
+    cursor: url(../img/icon_cursor_default.png), default  !important;
 }
 
 html body a, html body button, html body iframe, html body label{
-	cursor: url(../img/icon_cursor_pointer.png), pointer  !important;
+    cursor: url(../img/icon_cursor_pointer.png), pointer  !important;
 }
 
 /* 폰트 초기화 */

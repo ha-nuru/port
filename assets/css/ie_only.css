@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.h_link{
+    text-align: center;
+}
+.h_link li {
+    display: inline-block;
+  }
+.h_link .h_link_b {
+    left: 50%;
+    transform: translateX(-50%);
+  }

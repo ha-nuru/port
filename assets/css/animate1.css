@@ -56,7 +56,7 @@
     background-position: -10000px 0;
   }
 }
-.marquee-nav {
+.marquee-nav, .marquee-nav_l {
     white-space: nowrap;
     display: flex;
     animation-name: kf_page_title;
@@ -69,35 +69,28 @@
     left: 0;
 }
 .marquee-nav_l {
-    white-space: nowrap;
-    display: flex;
-    animation-name: kf_page_title1;
-    animation-iteration-count: infinite;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    position: absolute;
-    animation-play-state: running;
+    left:auto;
     top: 0;
     right: 0;
+    animation-name: kf_page_title1;
 }
 @keyframes kf_page_title {
     0% {
-        -webkit-transform: translate3d(0%, 0, 0);
-        transform: translate3d(0%, 0, 0);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-        -webkit-transform: translate3d(-25%, 0, 0);
-        transform: translate3d(-25%, 0, 0);
+        -webkit-transform: translateX(-25%);
+        transform: translateX(-25%);
     }
 }
 @keyframes kf_page_title1 {
     0% {
-        -webkit-transform: translate3d(0%, 0, 0);
-        transform: translate3d(0%, 0, 0);
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-        -webkit-transform: translate3d(25%, 0, 0);
-        transform: translate3d(25%, 0, 0);
+        -webkit-transform: translateX(25%);
     }
 }
 .pattern {
