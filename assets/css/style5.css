@@ -184,11 +184,16 @@ body {
 #main_sec .ha_link {
   background-image: url(../img/com_imogi.gif);
 }
+.link_box_bub{
+  display: block;
+}
+.ha_link_btn .link_box_bub,
+.work_link_btn .link_box_bub{
+  display:none;
+}
 .ha_link_btn .link_box,
 .work_link_btn .link_box {
-  display: none;
   position: absolute;
-  left: -170px;
   top: -28%;
   padding: 8px;
   border-radius: 8px;
@@ -200,9 +205,11 @@ body {
   text-transform: none;
   line-height: 2;
 }
+.work_link_btn .link_box{
+  left: -170px;
+}
 .ha_link_btn .link_box {
   right: -90px;
-  left: auto;
 }
 .ha_link_btn .link_box:after,
 .work_link_btn .link_box:after {
@@ -227,8 +234,8 @@ body {
   filter: none;
   -webkit-filter: none;
 }
-.ha_link:hover + .link_box,
-.work_link:hover + .link_box {
+.ha_link:hover + .link_box_bub,
+.work_link:hover + .link_box_bub {
   display: block;
 }
 /*-------------------------------------------------------*/
@@ -1049,7 +1056,7 @@ body {
   height: 800px;
   background: url(../img/monitor.png) no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: top;
   width: 100%;
   position: relative;
   background-color: #282552;
@@ -2162,15 +2169,27 @@ label.toggle_item {
 /* responsive */
 @media all and (max-width: 1170px) {
 
-  .ha_link:hover + .link_box, .work_link:hover + .link_box{
-    left: 0;
+  .ha_link_btn .link_box, .work_link_btn .link_box{
     font-size: 20px;
+    top: -45%;
+  }
+  .work_link_btn .link_box{
+    left: 0;
   }
   .ha_link_btn .link_box{
     right: 0;
+    top: -40%;
   }
   .ha_link_btn .link_box:after, .work_link_btn .link_box:after{
     transform: translateX(-50%);
     top: 90%;
+  }
+  .ha_link_btn, .work_link_btn{
+    width: 245px;
+    height: 165px;
+  }
+  .ha_link_btn{
+    width: 195px;
+    height: 165px;
   }
 }
