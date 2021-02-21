@@ -26,6 +26,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
 	<link rel="shortcut icon" href="assets/img/favi6.ico" type="images/x-icon">
+	   <!--[if lte IE 11]> 
+        <link rel="stylesheet" type="text/css" href="assets/css/ie_only.css" />
+         <script type="text/javascript">
+            alert("Please Upgrade Your BROWSER !");
+        </script>
+    <![endif]-->
 </head>
 
 <body>
@@ -34,7 +40,7 @@
 	</a>
 	<section id="move_index">
 		<div class="nav_site_index">
-			<a href="#site" class="ind_starbucks">
+			<a href="#site" class="ind_starbucks" data-slide="1">
 				<div class="site_index">
 					<div class="marquee-nav">
 						<span>starbucks starbucks</span>
@@ -52,7 +58,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="#site" class="ind_cjw">
+			<a href="#site" class="ind_cjw" data-slide="2">
 				<div class="site_index">
 					<div class="marquee-nav">
 						<span aria-hidden="true">CHUNGGUNGONE CHUNGGUNGONE</span>
@@ -67,7 +73,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="#site" class="ind_homedeco">
+			<a href="#site" class="ind_homedeco" data-slide="3">
 				<div class="site_index">
 					<div class="marquee-nav">
 						<span aria-hidden="true">hansol homedeco hansol homedeco</span>
@@ -80,7 +86,7 @@
 					</div>
 				</div>
 			</a>
-			<a href="#site" class="ind_almond">
+			<a href="#site" class="ind_almond" data-slide="4">
 				<div class="site_index">
 					<div class="marquee-nav">
 						<span aria-hidden="true">almond breeze almond breeze</span>
@@ -128,27 +134,27 @@
 	</section>
 	<!--//move_index-->
 	<section id="site">
-		<div class="container">
+		<div class="site_cont">
 			<div class="center slider">
-				<div class="monitor">
+				<div class="monitor monitor_s">
 					<h5 class="ir_su">모니터 이미지</h5>
 					<div class="hiddenS">
-						<span class="num Snum">01
-						</span>
 						<div class="scren screnS">
 							<h5 class="ir_su">스타벅스 사이트 이미지</h5>
 							<div class="site_textW">
 								<div class="stext_w">
 									<b>starbucks</b>
-									<span>
-										(about 3days⏳)
-									</span>
-									<p class="s_stext">
-										clone coding👩🏻‍💻<br />
-										rwd📱<br />
-										bx-slider plugin🔌<br />
-										scroll-maginc plugin🔌<br />
-									</p>
+									<div class="scen_in_text">
+										<span>
+											(about 3days⏳)
+										</span>
+										<p class="s_stext">
+											clone coding👩🏻‍💻<br />
+											rwd📱<br />
+											bx-slider plugin🔌<br />
+											scroll-maginc plugin🔌<br />
+										</p>
+									</div>
 								</div>
 								<div class="button_w">
 									<a href="http://gkdk4195.cafe24.com/starbucks/index.html" target="_blank">
@@ -168,9 +174,11 @@
 							</div>
 						</div>
 					</div>
+					<span class="num Snum">01
+					</span>
 				</div>
 				<!--//starbucks-->
-				<div class="monitor">
+				<div class="monitor monitor_c">
 					<h5 class="ir_su">모니터 이미지</h5>
 					<div class="hiddenS">
 						<span class="Cnum num">02 </span>
@@ -179,12 +187,14 @@
 							<div class="site_textW">
 								<div class="stext_w">
 									<b>chungjungwon</b>
-									<span>(about 2weeks⏳)</span>
-									<p class="s_stext">
-										rwd📱💻🖥<br />
-										<span> 1920px/ 1024px/ 768px/ mobile</span><br />
-										bx-slider plugin🔌
-									</p>
+									<div class="scen_in_text">
+										<span>(about 2weeks⏳)</span>
+										<p class="s_stext">
+											rwd📱💻🖥<br />
+											<span> 1920px/ 1024px/ 768px/ mobile</span><br />
+											bx-slider plugin🔌
+										</p>
+									</div>
 								</div>
 								<div class="button_w C_btn">
 									<a href="http://gkdk4195.cafe24.com/cjw/index.html" target="_blank">
@@ -205,7 +215,7 @@
 					</div>
 				</div>
 				<!--cjw-->
-				<div class="monitor">
+				<div class="monitor monitor_h">
 					<h5 class="ir_su">모니터 이미지</h5>
 					<div class="hiddenS">
 						<span class="Hnum num">03</span>
@@ -214,13 +224,15 @@
 							<div class="site_textW">
 								<div class="stext_w">
 									<b>hansole</b>
-									<span>(about 1days⏳)</span>
-									<p class="s_stext">
-                                        clone coding👩🏻‍💻<br />
-                                        rwd📱💻🖥<br/>
-                                        1920px/640px<br/>
-										bx-slider plugin🔌
-									</p>
+									<div class="scen_in_text">
+										<span>(about 1days⏳)</span>
+										<p class="s_stext">
+											clone coding👩🏻‍💻<br />
+											rwd📱💻🖥<br/>
+											1920px/640px<br/>
+											bx-slider plugin🔌
+										</p>
+									</div>
 								</div>
 								<div class="button_w H_btn">
 									<a href="http://gkdk4195.cafe24.com/hansolhome/index.html" target="_blank">
@@ -241,7 +253,7 @@
 					</div>
                 </div>
                 <!--hansole-->
-                <div class="monitor">
+                <div class="monitor monitor_a">
 					<h5 class="ir_su">모니터 이미지</h5>
 					<div class="hiddenS">
 						<span class="Anum num">04</span>
@@ -250,12 +262,14 @@
 							<div class="site_textW">
 								<div class="stext_w">
 									<b>almondbreez</b>
-									<span>(preparing🔊)</span>
-									<p class="s_stext">
-                                        redesign site👩🏻‍💻<br />
-										scrollMagic, vivus<br/>
-										tweenMax, plugin🔌
-									</p>
+									<div class="scen_in_text">
+										<span>(preparing🔊)</span>
+										<p class="s_stext">
+											redesign site👩🏻‍💻<br />
+											scrollMagic, vivus<br/>
+											tweenMax, plugin🔌
+										</p>
+									</div>
 								</div>
 								<div class="button_w A_btn">
 									<a href="http://gkdk4195.cafe24.com/almond/index.html" target="_blank">
@@ -276,6 +290,10 @@
 					</div>
                 </div>
                 <!-- almond -->
+			</div>
+			<div class="slider_arrow">
+				<button type="button" class="prev_btn"></button>
+				<button type="button" class="next_btn"></button>
 			</div>
 		</div>
 		<div class="site_modal_wrap">
@@ -808,7 +826,7 @@ $('#header .btn_nav').click(function() {
 	<!--//site-->
 	<section id="section6">
 		<div class="sec6_main">
-			<nav class="sec6_nav">
+			<nav class="nav_scroll scroll_on">
 				<div class="nav_W">
 					<a href="https://github.com/ha-nuru" target="_blank">github</a>
 					<a href="#a">#ha_study</a>
@@ -848,7 +866,7 @@ $('#header .btn_nav').click(function() {
 			</div>
 	</section><!-- //section6 -->
 	<section id="section7">
-		<nav class="nav_contact">
+		<nav class="nav_scroll nav_contact">
 			<div class="nav_contactW">
 				<div class="contactN">
 					<a href="#">📱</a>
@@ -882,30 +900,65 @@ $('#header .btn_nav').click(function() {
 					<button type="submit" class="contac_btn">💌</button>
 				</form>
 			</div>
+			<div class="heighttop_w">
+				<a href="#move_index" class="heighttop ir_pm">
+				클릭시 스크롤 위로 향하는 버튼 이미지</a>
+				<div class="top_arrow_box">up!</div>
+			</div>
 		</div>
-		<div class="heighttop_w">
-			<a href="#move_index" class="heighttop ir_pm">
-			클릭시 스크롤 위로 향하는 버튼 이미지</a>
-			<div class="top_arrow_box">up!</div>
-		</div>>
 	</section>
 	<script src="assets/js/jquery.min_1.12.4.js"></script>
+	<script src="assets/js/custome1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/slick.js"></script>
 	<script src="assets/js/gsap.min.js"></script>
 	<script src="assets/js/prism.js"></script>
 	<script src="assets/js/plugin.js"></script>
-	<script src="assets/js/custome1.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script>
-
 		/*슬라이더*/
-		$(".center").slick({
-			centerMode: true,
+		$("#site .center").slick({
 			slidesToShow: 1,
-			slidesToScroll: 3
+			slidesToScroll: 3,
+			centerMode: true,
+			centerPadding: '300px',
+			responsive: [ // 반응형 웹 구현 옵션
+				{  
+					breakpoint: 1700, 
+					settings: {
+					slidesToShow: 1,
+					centerMode: false,
+					centerPadding: '180px',
+					} 
+				},
+				{  
+					breakpoint: 1540, 
+					settings: {
+					centerPadding: '100px',
+					}
+				},
+				{  
+					breakpoint: 1000, 
+					settings: {
+					centerPadding: '20px',
+					}
+				},
+			]
 		});
-		
-	</script>
+		// site index a링크 click 슬라이더 이동
+		$('a[data-slide]').click(function(e) {
+		var slideno = $(this).data('slide');
+		$('.center').slick('slickGoTo', slideno - 1);
+	});
+    $("#site .slider_arrow .prev_btn").on("click", function () {
+      $(".main_visual .slider_main_box").slick("slickPrev");
+    });
+    $("#site .slider_arrow .next_btn").on("click", function () {
+      $(".main_visual .slider_main_box").slick("slickNext");
+  });
+  </script>
+
 </body>
 </html>

@@ -154,7 +154,7 @@ $(document).ready(function () {
   var scene2 = new ScrollMagic.Scene({
     triggerElement: ".sec2_boxR",
     triggerHook: 0.9,
-    offset: 400,
+    offset: 300,
   })
     .setClassToggle(".mov_txt2", "visible")
     .addTo(controller);
@@ -163,7 +163,7 @@ $(document).ready(function () {
   var scene3 = new ScrollMagic.Scene({
     triggerElement: ".sec2_boxR",
     triggerHook: 0.9,
-    offset: 500,
+    offset: 300,
   })
     .setClassToggle(".mov_txt3", "visible")
     .addTo(controller);
@@ -183,26 +183,27 @@ $(document).ready(function () {
   });
 
   /*section2 - nav*/
-  var nav_ind6 = $("#section2").offset();
+  var nav_ind6 = $("#About_gh").offset().top;
   $(window).scroll(function () {
-    if ($(document).scrollTop() >= nav_ind6.top) {
-      $(".sec2_nav").css("visibility", "visible");
-      $(".sec2_nav").addClass("sec2_nav_bg");
+    var scroll = $(window).scrollTop();
+    if (scroll >= nav_ind6) {
+      $("#section2 .nav_scroll").addClass("sec2_nav_bg");
       $(".nav_W").show();
-      $(".nav_W a").show().css("display", "block");
+      $(".nav_W a").show();
     } else {
-      $(".sec2_nav").css("visibility", "hidden");
-      $(".sec2_nav").removeClass("sec2_nav_bg");
+      $("#section2 .nav_scroll").removeClass("sec2_nav_bg");
       $(".nav_W").hide();
+      $(".nav_W a").hide();
     }
+		console.log(scroll);
+		console.log(nav_ind6);
   });
-
   /*스킬 퍼센트 애니메이션*/
   $(window).scroll(function () {
     let scroll = $(window).scrollTop() + 400;
     if (scroll >= $("#section3").offset().top) {
       gsap.to(
-        ".logo_W >div:nth-of-type(1) .graph span,.logo_W >div:nth-of-type(2) .graph span,.logo_W >div:nth-of-type(6) .graph span",
+        ".logo_w >div:nth-of-type(1) .graph span,.logo_w >div:nth-of-type(2) .graph span,.logo_w >div:nth-of-type(6) .graph span",
         {
           duration: 1,
           width: 95 + "%",
@@ -211,35 +212,35 @@ $(document).ready(function () {
           opacity: 1,
         }
       );
-      gsap.to(".logo_W >div:nth-of-type(3) .graph span", {
+      gsap.to(".logo_w >div:nth-of-type(3) .graph span", {
         duration: 1,
         width: 80 + "%",
         ease: Bounce.easeOut,
         stagger: 0.5,
         opacity: 1,
       });
-      gsap.to(".logo_W >div:nth-of-type(4) .graph span", {
+      gsap.to(".logo_w >div:nth-of-type(4) .graph span", {
         duration: 1,
         width: 85 + "%",
         ease: Bounce.easeOut,
         stagger: 0.8,
         opacity: 1,
       });
-      gsap.to(".logo_W >div:nth-of-type(5) .graph span", {
+      gsap.to(".logo_w>div:nth-of-type(5) .graph span", {
         duration: 1,
         width: 90 + "%",
         ease: Bounce.easeOut,
         stagger: 0.9,
         opacity: 1,
       });
-      gsap.to(".logo_W >div:nth-of-type(7) .graph span", {
+      gsap.to(".logo_w >div:nth-of-type(7) .graph span", {
         duration: 1,
         width: 80 + "%",
         ease: Bounce.easeOut,
         stagger: 1,
         opacity: 1,
       });
-      gsap.to(".logo_W >div:nth-of-type(8) .graph span", {
+      gsap.to(".logo_w >div:nth-of-type(8) .graph span", {
         duration: 1,
         width: 70 + "%",
         ease: Bounce.easeOut,

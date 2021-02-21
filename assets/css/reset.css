@@ -16,13 +16,16 @@ html, body, h1, iframe {
 }
 
 html body a, html body button, html body iframe, html body label{
-    cursor: url(../img/icon_cursor_pointer.png), pointer  !important;
+    cursor: url(../img/icon_cursor_pointer.png), default  !important;
 }
 
 /* 폰트 초기화 */
+html{
+    font-size: 0.625em;
+}
 body, input, textarea, select, button, table {
     
-font-family: lores-9-narrow, sans-serif; font-weight: 700; font-style: normal; color: #222; font-size: 16px; line-height: 1.5;
+font-family: lores-9-narrow, sans-serif; font-weight: 700; font-style: normal; color: #222; line-height: 1.5;
 text-transform:uppercase;
 }
 

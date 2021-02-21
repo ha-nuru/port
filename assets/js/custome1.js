@@ -15,42 +15,65 @@ $(document).ready(function () {
     });
   });
   /*스크립트, 컨택트 nav*/
-  var startchange = $(".sec6_main").eq(0).offset();
+  var startchange = $(".sec6_main").offset().top;
   $(window).scroll(function () {
-    if ($(document).scrollTop() > startchange.top - 100) {
-      $(".sec6_nav").css("visibility", "visible");
-      $(".sec6_nav").addClass("nav_scroll");
-      $(".nav_W").show();
-      $(".nav_W a").show().css("display", "block");
+    var scroll = $(window).scrollTop() + 200;
+    if (scroll >= startchange) {
+      $(".sec6_main .nav_scroll").addClass("scroll_on");
+      $(".sec6_main .nav_scroll").addClass("sec6_nav_bg");
+      $(".sec6_main .nav_W").show();
+      $(".sec6_main .nav_W a").show();
     } else {
-      $(".sec6_nav").css("visibility", "hidden");
-      $(".sec6_nav").removeClass("nav_scroll");
-      $(".nav_W").hide();
+      $(".sec6_main .nav_scroll").removeClass("sec6_nav_bg");
+      $(".sec6_main .nav_scroll").removeClass("scroll_on");
+      $(".sec6_main .nav_W").hide();
     }
   });
-  var startchange2 = $("#section7").offset();
+  var startchange2 = $("#section7").offset().top;
   $(window).scroll(function () {
-    if ($(document).scrollTop() > startchange2.top - 300) {
-      $(".sec6_nav").hide();
+    var scroll = $(window).scrollTop() + 200;
+    if (scroll >= startchange2) {
+      $(".sec6_main .nav_scroll").removeClass("scroll_on");
       $(".nav_contact").addClass("navCont_scroll");
       $(".nav_contact").show();
       $(".contactN").show();
-    } else {
+    }else if(startchange <= startchange2){
       $(".nav_contact").removeClass("navCont_scroll");
       $(".nav_contact").hide();
       $(".contactN").hide();
-      $(".sec6_nav").show();
+    }else {
+      $(".sec6_main .nav_scroll").removeClass("scroll_on");
     }
   });
   /*사이트 인덱스 x 버튼*/
+  // $(window).scroll(function () {
+  //   var startchange5 = $("#site").offset();
+  //   if ($(document).scrollTop() + 100 > startchange5.top) {
+  //     $(".X_click").css("display", "none");
+  //   } else {
+  //     $(".X_click").css("display", "block");
+  //   }
+  // });
   $(window).scroll(function () {
-    var startchange5 = $("#site").offset();
-    if ($(document).scrollTop() + 100 > startchange5.top) {
-      $(".X_click").css("display", "none");
-    } else {
-      $(".X_click").css("display", "block");
-    }
+    var scr_w = $(window).width();
+    if(scr_w >= 860) {
+      var startchange5 = $("#site").offset();
+      if ($(document).scrollTop() + 100 > startchange5.top) {
+          $(".X_click").css("display", "none");
+        } else {
+          $(".X_click").css("display", "block");
+        }
+      }else{
+        var startchange6 = $("#section6").offset();
+        if ($(document).scrollTop() + 100 > startchange6.top) {
+          $(".X_click").css("display", "none");
+        } else {
+          $(".X_click").css("display", "block");
+        }
+      }
   });
+
+    
   /*탭메뉴*/
   $(".site_wrap").each(function (index) {
     $(this).find(".tab_wrap").attr("data-num", index);
@@ -105,3 +128,6 @@ $(document).ready(function () {
       return false;
   });
 });
+$(function(){
+
+})
