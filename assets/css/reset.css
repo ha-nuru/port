@@ -16,7 +16,7 @@ html, body, h1, iframe {
 }
 
 html body a, html body button, html body iframe, html body label{
-    cursor: url(../img/icon_cursor_pointer.png), default  !important;
+    cursor: url(../img/icon_cursor_pointer.png), pointer  !important;
 }
 
 /* 폰트 초기화 */
@@ -58,7 +58,8 @@ h1,h2,h3,h4,h5,h6 {
 img,fieldset {border:0 none;}
 
 /* 버튼 초기화 */
-button {border: 0;}
+button {border: 0; outline: none;}
+input {outline: none;}
 
 video, img {width: 100%;}
 

@@ -83,7 +83,7 @@ $(document).ready(function () {
     $(".tab_btn > ul > li").click(function (e) {
       e.preventDefault();
       let target = $(this);
-      let num = target.parent().parent().parent().attr("data-num");
+      let num = target.parents('.tab_wrap').attr("data-num");
       let index = target.index();
 
       $(".tab_wrap.num" + num + " .tab_btn > ul > li").removeClass("active");
@@ -99,7 +99,7 @@ $(document).ready(function () {
   $(".toggle_item").click(function (e) {
     e.preventDefault("a");
     let target = $(this);
-    let num = target.parent().parent().parent().parent().attr("data-num");
+    let num = target.parents('.tab_wrap').attr("data-num");
 
     $(".tab_wrap.num" + num + " .tab_cont > div .language-js").toggleClass(
       "on"
@@ -128,6 +128,3 @@ $(document).ready(function () {
       return false;
   });
 });
-$(function(){
-
-})

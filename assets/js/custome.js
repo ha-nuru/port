@@ -203,10 +203,10 @@ $(document).ready(function () {
     let scroll = $(window).scrollTop() + 400;
     if (scroll >= $("#section3").offset().top) {
       gsap.to(
-        ".logo_w >div:nth-of-type(1) .graph span,.logo_w >div:nth-of-type(2) .graph span,.logo_w >div:nth-of-type(6) .graph span",
+        ".logo_w >div:nth-of-type(1) .graph span, .logo_w >div:nth-of-type(2) .graph span",
         {
           duration: 1,
-          width: 95 + "%",
+          width: 90 + "%",
           ease: Bounce.easeOut,
           stagger: 0.1,
           opacity: 1,
@@ -214,37 +214,30 @@ $(document).ready(function () {
       );
       gsap.to(".logo_w >div:nth-of-type(3) .graph span", {
         duration: 1,
-        width: 80 + "%",
+        width: 60 + "%",
         ease: Bounce.easeOut,
-        stagger: 0.5,
+        stagger: 0.1,
         opacity: 1,
       });
-      gsap.to(".logo_w >div:nth-of-type(4) .graph span", {
+      gsap.to(".logo_w>div:nth-of-type(4) .graph span, .logo_w>div:nth-of-type(5) .graph span", {
+        duration: 1,
+        width: 75 + "%",
+        ease: Bounce.easeOut,
+        stagger: 0.1,
+        opacity: 1,
+      });
+      gsap.to(".logo_w >div:nth-of-type(6) .graph span", {
         duration: 1,
         width: 85 + "%",
         ease: Bounce.easeOut,
-        stagger: 0.8,
+        stagger: 0.1,
         opacity: 1,
       });
-      gsap.to(".logo_w>div:nth-of-type(5) .graph span", {
+      gsap.to(".logo_w >div:nth-of-type(7) .graph span, .logo_w >div:nth-of-type(8) .graph span", {
         duration: 1,
-        width: 90 + "%",
+        width: 50 + "%",
         ease: Bounce.easeOut,
-        stagger: 0.9,
-        opacity: 1,
-      });
-      gsap.to(".logo_w >div:nth-of-type(7) .graph span", {
-        duration: 1,
-        width: 80 + "%",
-        ease: Bounce.easeOut,
-        stagger: 1,
-        opacity: 1,
-      });
-      gsap.to(".logo_w >div:nth-of-type(8) .graph span", {
-        duration: 1,
-        width: 70 + "%",
-        ease: Bounce.easeOut,
-        stagger: 1,
+        stagger: 0.1,
         opacity: 1,
       });
     }
