@@ -1,6 +1,6 @@
 //index 6
-/*section2 이모지 폰트 움직이기*/
-$(document).ready(function () {
+/*sub_bott imogi font ani*/
+$(function () {
   let current_class_index = 0;
   const classes = ["boo", "hey", "dude", "classes", "and", "junk"];
   let current_class = "";
@@ -19,9 +19,122 @@ $(document).ready(function () {
       current_class = new_class;
     },
   });
-});
 
-/*section2 이모지 움직이기*/
+  /*sub_bott banner ani*/
+  $(".about-marquee").marquee({
+    duration: 21000,
+    gap: 0,
+    delayBeforeStart: 0,
+    direction: "left",
+    duplicated: true,
+    startVisible: true,
+    pauseOnHover: true,
+  });
+
+  /*scroll magic*/
+  var scr_w = $(window).width();
+  if (scr_w >= 860) {
+    var controller = new ScrollMagic.Controller();
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: ".img_cont_box",
+      triggerHook: 0.9,
+      offset: 300,
+    })
+      .setClassToggle(".img_cont_txt span", "visible")
+      .addTo(controller);
+  } else {
+    var controller = new ScrollMagic.Controller();
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: "#sub_cent",
+      triggerHook: 0.9,
+      offset: 300,
+    })
+      .setClassToggle(".img_cont_txt span", "visible")
+      .addTo(controller);
+  }
+
+  /*mouse move img */
+  $(document).mousemove(function (e) {
+    $(".see_ani").offset({
+      left: e.pageX + 20,
+      top: e.pageY + -300,
+    });
+  });
+  $(".skillM_t a").mouseover(function () {
+    $(this).siblings().css("display", "block");
+  });
+  $(".skillM_t a").mouseleave(function () {
+    $(this).siblings().css("display", "none");
+  });
+
+  /*About_gh - nav*/
+  var nav_about = $("#About_gh").offset().top;
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop() + 100;
+    if (scroll >= nav_about) {
+      $("#sub_bott .nav_scroll").addClass("about_nav_bg");
+      $("#sub_bott .nav_W").show();
+      $("#sub_bott .nav_W a").show();
+    } else {
+      $("#sub_bott .nav_scroll").removeClass("about_nav_bg");
+      $("#sub_bott .nav_W").hide();
+      $("#sub_bott .nav_W a").hide();
+    }
+    console.log(scroll + "g");
+    console.log(nav_about);
+  });
+});
+/*skill percent ani */
+$(window).scroll(function () {
+  let scroll = $(window).scrollTop() + 400;
+  if (scroll >= $("#sub_cent").offset().top) {
+    gsap.to(
+      ".logo_w >div:nth-of-type(1) .graph span, .logo_w >div:nth-of-type(2) .graph span",
+      {
+        duration: 1,
+        width: 90 + "%",
+        ease: Bounce.easeOut,
+        stagger: 0.1,
+        opacity: 1,
+      }
+    );
+    gsap.to(".logo_w >div:nth-of-type(3) .graph span", {
+      duration: 1,
+      width: 60 + "%",
+      ease: Bounce.easeOut,
+      stagger: 0.1,
+      opacity: 1,
+    });
+    gsap.to(
+      ".logo_w>div:nth-of-type(4) .graph span, .logo_w>div:nth-of-type(5) .graph span",
+      {
+        duration: 1,
+        width: 75 + "%",
+        ease: Bounce.easeOut,
+        stagger: 0.1,
+        opacity: 1,
+      }
+    );
+    gsap.to(".logo_w >div:nth-of-type(6) .graph span", {
+      duration: 1,
+      width: 85 + "%",
+      ease: Bounce.easeOut,
+      stagger: 0.1,
+      opacity: 1,
+    });
+    gsap.to(
+      ".logo_w >div:nth-of-type(7) .graph span, .logo_w >div:nth-of-type(8) .graph span",
+      {
+        duration: 1,
+        width: 50 + "%",
+        ease: Bounce.easeOut,
+        stagger: 0.1,
+        opacity: 1,
+      }
+    );
+  }
+});
+/*sub_bott imogi ani*/
 (function ($, window, undefined) {
   $.fn.marqueeify = function (options) {
     var settings = $.extend(
@@ -128,119 +241,3 @@ $(document).ready(function () {
     });
   };
 })(jQuery, window);
-
-$(document).ready(function () {
-  /*section2 배너 움직이기*/
-  $(".about-marquee").marquee({
-    duration: 21000,
-    gap: 0,
-    delayBeforeStart: 0,
-    direction: "left",
-    duplicated: true,
-    startVisible: true,
-    pauseOnHover: true,
-  });
-  /*스크롤 매직*/
-  var controller = new ScrollMagic.Controller();
-  var scene1 = new ScrollMagic.Scene({
-    triggerElement: ".sec2_boxR",
-    triggerHook: 0.9,
-    offset: 300,
-  })
-    .setClassToggle(".mov_txt1", "visible")
-    .addTo(controller);
-
-  var controller = new ScrollMagic.Controller();
-  var scene2 = new ScrollMagic.Scene({
-    triggerElement: ".sec2_boxR",
-    triggerHook: 0.9,
-    offset: 300,
-  })
-    .setClassToggle(".mov_txt2", "visible")
-    .addTo(controller);
-
-  var controller = new ScrollMagic.Controller();
-  var scene3 = new ScrollMagic.Scene({
-    triggerElement: ".sec2_boxR",
-    triggerHook: 0.9,
-    offset: 300,
-  })
-    .setClassToggle(".mov_txt3", "visible")
-    .addTo(controller);
-
-  /*마우스 오버 이미지*/
-  $(document).mousemove(function (e) {
-    $(".see_ani").offset({
-      left: e.pageX + 20,
-      top: e.pageY + -300,
-    });
-  });
-  $(".skillM_t a").mouseover(function () {
-    $(this).siblings().css("display", "block");
-  });
-  $(".skillM_t a").mouseleave(function () {
-    $(this).siblings().css("display", "none");
-  });
-
-  /*section2 - nav*/
-  var nav_ind6 = $("#About_gh").offset().top;
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll >= nav_ind6) {
-      $("#section2 .nav_scroll").addClass("sec2_nav_bg");
-      $(".nav_W").show();
-      $(".nav_W a").show();
-    } else {
-      $("#section2 .nav_scroll").removeClass("sec2_nav_bg");
-      $(".nav_W").hide();
-      $(".nav_W a").hide();
-    }
-		console.log(scroll);
-		console.log(nav_ind6);
-  });
-  /*스킬 퍼센트 애니메이션*/
-  $(window).scroll(function () {
-    let scroll = $(window).scrollTop() + 400;
-    if (scroll >= $("#section3").offset().top) {
-      gsap.to(
-        ".logo_w >div:nth-of-type(1) .graph span, .logo_w >div:nth-of-type(2) .graph span",
-        {
-          duration: 1,
-          width: 90 + "%",
-          ease: Bounce.easeOut,
-          stagger: 0.1,
-          opacity: 1,
-        }
-      );
-      gsap.to(".logo_w >div:nth-of-type(3) .graph span", {
-        duration: 1,
-        width: 60 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      });
-      gsap.to(".logo_w>div:nth-of-type(4) .graph span, .logo_w>div:nth-of-type(5) .graph span", {
-        duration: 1,
-        width: 75 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      });
-      gsap.to(".logo_w >div:nth-of-type(6) .graph span", {
-        duration: 1,
-        width: 85 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      });
-      gsap.to(".logo_w >div:nth-of-type(7) .graph span, .logo_w >div:nth-of-type(8) .graph span", {
-        duration: 1,
-        width: 50 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      });
-    }
-  });
-});
-
