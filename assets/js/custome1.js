@@ -14,14 +14,17 @@ $(function () {
       top: e.pageY + 70,
     });
   });
+
   /*script contact sec nav*/
-  var startchange = $(".post_s").offset().top;
-  var scroll_do = $(".post_s .nav_scroll");
-  var scroll_contact = $(".nav_contact");
-  var scroll_do_in = $(".post_s .nav_W");
   $(window).scroll(function () {
-    var scroll = $(window).scrollTop() + 200;
-    if (scroll >= startchange) {
+    var wHeight = $(window).height() / 6;
+    var scrolls = $(window).scrollTop() + wHeight;
+    var startchange = $(".post_s").offset().top;
+    var scroll_do = $(".post_s .nav_scroll");
+    var scroll_contact = $(".nav_contact");
+    var scroll_do_in = $(".post_s .nav_W");
+    var startchange2 = $("#contact_p").offset().top;
+    if (scrolls >= startchange) {
       scroll_do.addClass("scroll_on");
       scroll_do.addClass("sec6_nav_bg");
       scroll_do_in.show();
@@ -31,11 +34,7 @@ $(function () {
       scroll_do.removeClass("scroll_on");
       scroll_do_in.hide();
     }
-  });
-  var startchange2 = $("#contact_p").offset().top;
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop() + 200;
-    if (scroll >= startchange2) {
+    if (scrolls >= startchange2) {
       scroll_do.removeClass("scroll_on");
       scroll_contact.addClass("navCont_scroll");
       scroll_contact.show();
@@ -47,36 +46,22 @@ $(function () {
     } else {
       scroll_do.removeClass("scroll_on");
     }
-  });
-  // highttop show
-  var hight_s = $("#post_scrap").offset().top;
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop() + 600;
-    if (scroll >= hight_s) {
+    // highttop show
+    var hight_s = $("#post_scrap").offset().top;
+    // var scroll = $(window).scrollTop();
+    if (scrolls >= hight_s) {
       $(".heighttop").addClass("up");
     } else {
       $(".heighttop").removeClass("up");
     }
-  });
-  /*site index x_button */
-  $(window).scroll(function () {
-    var scr_w = $(window).width();
-    if (scr_w >= 860) {
-      var startchange5 = $("#post_scrap").offset();
-      if ($(document).scrollTop() + 100 > startchange5.top) {
-        $(".X_click").css("display", "none");
-      } else {
-        $(".X_click").css("display", "block");
-      }
+    /*site index x_button */
+    if ($(document).scrollTop() + 100 > hight_s) {
+      $(".X_click").css("display", "none");
     } else {
-      var startchange6 = $("#post_scrap").offset();
-      if ($(document).scrollTop() + 100 > startchange6.top) {
-        $(".X_click").css("display", "none");
-      } else {
-        $(".X_click").css("display", "block");
-      }
+      $(".X_click").css("display", "block");
     }
   });
+
   /*portfolio site modal*/
   $(".site_tri1").on("click", function () {
     $(".site_modal_wrap1").toggleClass("open");

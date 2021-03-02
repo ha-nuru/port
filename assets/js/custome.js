@@ -68,10 +68,11 @@ $(function () {
   });
 
   /*About_gh - nav*/
-  var nav_about = $("#About_gh").offset().top;
   $(window).scroll(function () {
-    var scroll = $(window).scrollTop() + 100;
-    if (scroll >= nav_about) {
+    var nav_about = $("#About_gh").offset().top;
+    var wHeight = $(window).height() / 8;
+    var scrolls = $(window).scrollTop() + wHeight;
+    if (scrolls >= nav_about) {
       $("#sub_bott .nav_scroll").addClass("about_nav_bg");
       $("#sub_bott .nav_W").show();
       $("#sub_bott .nav_W a").show();
@@ -80,60 +81,61 @@ $(function () {
       $("#sub_bott .nav_W").hide();
       $("#sub_bott .nav_W a").hide();
     }
-    console.log(scroll + "g");
+    console.log(wHeight);
     console.log(nav_about);
+    /*skill percent ani */
+    var wHeight = ($(window).height() / 3) * 2;
+    var scrolls = $(window).scrollTop() + wHeight;
+    if (scrolls >= $("#sub_cent").offset().top) {
+      gsap.to(
+        ".logo_w >div:nth-of-type(1) .graph span, .logo_w >div:nth-of-type(2) .graph span",
+        {
+          duration: 1,
+          width: 90 + "%",
+          ease: Bounce.easeOut,
+          stagger: 0.1,
+          opacity: 1,
+        }
+      );
+      gsap.to(".logo_w >div:nth-of-type(3) .graph span", {
+        duration: 1,
+        width: 60 + "%",
+        ease: Bounce.easeOut,
+        stagger: 0.1,
+        opacity: 1,
+      });
+      gsap.to(
+        ".logo_w>div:nth-of-type(4) .graph span, .logo_w>div:nth-of-type(5) .graph span",
+        {
+          duration: 1,
+          width: 75 + "%",
+          ease: Bounce.easeOut,
+          stagger: 0.1,
+          opacity: 1,
+        }
+      );
+      gsap.to(".logo_w >div:nth-of-type(6) .graph span", {
+        duration: 1,
+        width: 85 + "%",
+        ease: Bounce.easeOut,
+        stagger: 0.1,
+        opacity: 1,
+      });
+      gsap.to(
+        ".logo_w >div:nth-of-type(7) .graph span, .logo_w >div:nth-of-type(8) .graph span",
+        {
+          duration: 1,
+          width: 50 + "%",
+          ease: Bounce.easeOut,
+          stagger: 0.1,
+          opacity: 1,
+        }
+      );
+    }
+    console.log(wHeight);
   });
 });
-/*skill percent ani */
-$(window).scroll(function () {
-  let scroll = $(window).scrollTop() + 400;
-  if (scroll >= $("#sub_cent").offset().top) {
-    gsap.to(
-      ".logo_w >div:nth-of-type(1) .graph span, .logo_w >div:nth-of-type(2) .graph span",
-      {
-        duration: 1,
-        width: 90 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      }
-    );
-    gsap.to(".logo_w >div:nth-of-type(3) .graph span", {
-      duration: 1,
-      width: 60 + "%",
-      ease: Bounce.easeOut,
-      stagger: 0.1,
-      opacity: 1,
-    });
-    gsap.to(
-      ".logo_w>div:nth-of-type(4) .graph span, .logo_w>div:nth-of-type(5) .graph span",
-      {
-        duration: 1,
-        width: 75 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      }
-    );
-    gsap.to(".logo_w >div:nth-of-type(6) .graph span", {
-      duration: 1,
-      width: 85 + "%",
-      ease: Bounce.easeOut,
-      stagger: 0.1,
-      opacity: 1,
-    });
-    gsap.to(
-      ".logo_w >div:nth-of-type(7) .graph span, .logo_w >div:nth-of-type(8) .graph span",
-      {
-        duration: 1,
-        width: 50 + "%",
-        ease: Bounce.easeOut,
-        stagger: 0.1,
-        opacity: 1,
-      }
-    );
-  }
-});
+
 /*sub_bott imogi ani*/
 (function ($, window, undefined) {
   $.fn.marqueeify = function (options) {
