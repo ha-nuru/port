@@ -1492,7 +1492,7 @@ body {
 .site_modal_wrap3 .modal_center_inner .swiper-slide {
   background-image: url(../img/starbucks.jpg);
 }
-.site_modal_wrap3 .modal_center_inner .mobile_s_slider .contact_form input {
+.site_modal_wrap3 .modal_center_inner .mobile_s_slider{
   background-image: url(../img/starbucks_m.jpg);
 }
 .site_modal_wrap3 .inner_modal_slider3.mobile_s_slider {
