@@ -1513,8 +1513,23 @@ body {
 .site_modal_wrap6 .modal_center_inner .swiper-slide {
   background-image: url(../img/almond.jpg);
 }
+.site_modal_wrap6 .modal_center_inner .tb_s_slider {
+  background-image: url(../img/almond_t.jpg);
+}
 .site_modal_wrap6 .modal_center_inner .mobile_s_slider {
-  background: none;
+  background-image: url(../img/almond_m.jpg);
+}
+.site_modal_wrap6 .inner_modal_slider2.tb_s_slider {
+  background-position-y: -700px;
+}
+.site_modal_wrap6 .inner_modal_slider3.tb_s_slider {
+  background-position-y: -2500px;
+}
+.site_modal_wrap6 .inner_modal_slider2.mobile_s_slider {
+  background-position-y: -700px;
+}
+.site_modal_wrap6 .inner_modal_slider3.mobile_s_slider {
+  background-position-y: -1500px;
 }
 /* post_scrap */
 .post_s .nav_scroll .nav_W a {
