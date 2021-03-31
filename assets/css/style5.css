@@ -413,8 +413,7 @@ body {
   font-family: "Papyrus";
   -webkit-text-stroke-width: 0px;
   text-shadow: 1px 1px #aa00ff, -1px -1px #aa00ff;
-  font-size: 7vw !important;
-  letter-spacing: -2px !important;
+  font-size: 8vw !important;
 }
 #home_main .Tarro {
   display: block;
@@ -1492,7 +1491,7 @@ body {
 .site_modal_wrap3 .modal_center_inner .swiper-slide {
   background-image: url(../img/starbucks.jpg);
 }
-.site_modal_wrap3 .modal_center_inner .mobile_s_slider{
+.site_modal_wrap3 .modal_center_inner .mobile_s_slider {
   background-image: url(../img/starbucks_m.jpg);
 }
 .site_modal_wrap3 .inner_modal_slider3.mobile_s_slider {

@@ -84,9 +84,9 @@ $(function () {
     console.log(wHeight);
     console.log(nav_about);
     /*skill percent ani */
-    var wHeight = ($(window).height() / 3) * 2;
+    var wHeight = $(window).height();
     var scrolls = $(window).scrollTop() + wHeight;
-    if (scrolls >= $("#sub_cent").offset().top) {
+    if (scrolls >= $(".logo_w").offset().top) {
       gsap.to(
         ".logo_w >div:nth-of-type(1) .graph span, .logo_w >div:nth-of-type(2) .graph span",
         {
